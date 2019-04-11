@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import './css/App.css';
 import MyTimeline from './Timeline';
+import M from 'materialize-css';
 
 class App extends Component {
+  componentDidMount() {
+    M.AutoInit();
+  }
+
   render() {
     return (
       <div>
