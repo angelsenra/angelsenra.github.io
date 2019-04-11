@@ -1,32 +1,12 @@
-.icon-bar {
-  margin-top: 2em;
-  margin-bottom: 3em;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: auto;
-}
-.icon-bar a {
+.sidenav-trigger {
   float: left;
+  padding-top: 1.6rem;
+  display: none;
+}
+
+h3:first-of-type {
+  padding-top: 2rem;
   margin-top: 0;
-  margin-bottom: 0;
-  width: 18%;
-  margin-left: 1%;
-  margin-right: 1%;
-  transition: all 0.3s ease;
-  color: black;
-}
-.icon-bar a:hover {
-  color: blue;
-}
-
-#main {
-  padding-left: 300px;
-}
-
-@media only screen and (max-width: 992px) {
-  #main {
-    padding-left: 0;
-  }
 }
 
 /*# sourceMappingURL=App.css.map */

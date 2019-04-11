@@ -4,9 +4,9 @@ import './css/Timeline.css';
 
 function TimelineEvent(props) {
   let content;
-  if (props.type === "job") {
+  if (props.type === "info") {
     content = (
-      <div class="card timeline-content">
+      <div class="card timeline-content grey-text text-darken-4">
         <div class="card-content">
           <div class="card-title activator grey-text text-darken-4">
             <i class="material-icons right">keyboard_arrow_up</i>
@@ -23,9 +23,9 @@ function TimelineEvent(props) {
         </div>
       </div>
     );
-  } else {
+  } else if (props.type === "tabs") {
     content = (
-      <div class="card timeline-content">
+      <div class="card timeline-content grey-text text-darken-4">
         <div class="card-content">
           <h6>{props.when}</h6>
           <p>{props.what}</p>
@@ -51,7 +51,7 @@ function TimelineEvent(props) {
         <i class="material-icons">{props.icon}</i>
       </div>
     </li>
-  )
+  );
 }
 
 
@@ -70,7 +70,7 @@ function MyTimeline(props) {
   return (
     <Timeline events={[
       {
-        "type": "job",
+        "type": "info",
         "when": "July 2018 - [...]",
         "what": "Freelance",
         "where": "Cires21",
@@ -81,7 +81,7 @@ function MyTimeline(props) {
       },
       {
         "alias": "University",
-        "type": "learn",
+        "type": "tabs",
         "when": "2018 - 2022",
         "what": "Double degree in Software Engineering and Technologies for the Society of Information",
         "where": (
@@ -95,7 +95,7 @@ function MyTimeline(props) {
         "iconBg": "blue"
       },
       {
-        "type": "job",
+        "type": "info",
         "when": "February 2018 - May 2018",
         "what": "Freelance",
         "where": "KSNetwork.es",
@@ -106,7 +106,7 @@ function MyTimeline(props) {
       },
       {
         "alias": "Baccalourate",
-        "type": "learn",
+        "type": "tabs",
         "when": "2016 - 2018",
         "what": "Baccalourate - Technological",
         "where": (
@@ -120,7 +120,7 @@ function MyTimeline(props) {
         "iconBg": "blue"
       },
       {
-        "type": "job",
+        "type": "info",
         "when": "April 2016",
         "what": "Internship '4+ empresa Comunidad de Madrid​'",
         "where": "Fullcircle",
@@ -131,7 +131,7 @@ function MyTimeline(props) {
       },
       {
         "alias": "Secondary",
-        "type": "learn",
+        "type": "tabs",
         "when": "2012 - 2016",
         "what": "Secondary education with honors",
         "where": (
