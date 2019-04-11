@@ -4,11 +4,16 @@ import M from 'materialize-css';
 function Award(props) {
   const winner = (props.winner ? <i class="material-icons">stars</i> : null);
   const group = (props.group ? <i class="material-icons">group</i> : null);
+  const badge = (props.winner ?
+    <span class="badge new" data-badge-caption="">{props.badge}</span>
+    :
+    <span class="badge">{props.badge}</span>
+  )
   return (
     <li>
       <div class="collapsible-header">
-        {winner}{group}{props.what}
-        <span class="badge">{props.badge}</span></div>
+        {winner}{group}{props.what}{badge}
+      </div>
       <div class="collapsible-body">
         {props.description}
       </div>
