@@ -18,18 +18,18 @@ function MySidenav(props) {
               </div>
             </div>
             <div class="icon-bar">
-              <a href="https://github.com/yadkee"><i class="small fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/yadkee/"><i class="small fab fa-linkedin"></i></a>
-              <a href="mailto:yadkee@gmail.com"><i class="small fas fa-envelope"></i></a>
-              <a href="https://twitter.com/yadkee"><i class="small fab fa-twitter"></i></a>
-              <a href="https://telegram.me/yadkee"><i class="small fab fa-telegram"></i></a>
+              <a class="center-align" href="https://github.com/yadkee"><i class="fab fa-github"></i></a>
+              <a class="center-align" href="https://www.linkedin.com/in/yadkee/"><i class="fab fa-linkedin"></i></a>
+              <a class="center-align" href="mailto:yadkee@gmail.com"><i class="fas fa-envelope"></i></a>
+              <a class="center-align" href="https://twitter.com/yadkee"><i class="fab fa-twitter"></i></a>
+              <a class="center-align" href="https://telegram.me/yadkee"><i class="fab fa-telegram"></i></a>
             </div>
           </div>
         </li>
-        <li><a href="/#about"><i class="material-icons">home</i><b>Home</b></a></li>
-        <li><a href="#!"><i class="material-icons">star_border</i>Skills</a></li>
-        <li><a href="#!"><i class="material-icons">lightbulb_outline</i>Projects</a></li>
-        <li><a href="#!"><i class="material-icons">code</i>Blog</a></li>
+        <li><a href="#about"><i class="material-icons">home</i><b>Home</b></a></li>
+        {/*<li><a href="#!"><i class="material-icons">star_border</i>Skills</a></li>*/}
+        <li><a href="#projects"><i class="material-icons">lightbulb_outline</i>Projects</a></li>
+        {/*<li><a href="#!"><i class="material-icons">code</i>Blog</a></li>*/}
       </ul>
     </div>
   );

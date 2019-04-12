@@ -19,17 +19,21 @@ class App extends Component {
             <a href="#about" data-target="slide-out" class="sidenav-trigger"><i class="material-icons medium">menu</i></a>
             <h3 class="center-align" id="about">About me</h3>
             <p class="flow-text">
-              I'm a person but this is a prototype so I just want to see how the text would look.
+              Hello!
+              <br />
+              My name is Angel. I'm a somewhat eclectic programmer.
               <br />
               <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum.
+              I love working on new things and technologies I don't know.  Routine kills me, but when a project becomes a challenge I can't stop working on it.
+              <br />
+              Being self-taught for so long has made me very quick to learn new things and handle myself well.
+              <br />
+              However, I love working as a team with people who bring value and different ideas and I'm not afraid of making decisions.
               <br />
               <br />
-              I'm very passionate for dogs, windsurfing and apples!
+              Although I usually do a lot of things at the same time I always have time to answer questions so don't hesitate to contact me if you need anything.
+              <br />
+              Below you will find more information about me and the projects I have worked on.
             </p>
 
             <h3 class="center-align" id="experience">Experience & Education</h3>
@@ -40,6 +44,12 @@ class App extends Component {
 
             <h3 class="center-align" id="projects">Projects</h3>
             To be completed
+
+            <h3 class="center-align" id="projects">Contact</h3>
+            <p class="flow-text">
+              <a href="#about" data-target="slide-out" class="sidenav-trigger"><i class="material-icons medium">chevron_left</i></a>
+              You can find many ways of contacting me on your left!
+            </p>
           </div>
         </div>
       </div>
