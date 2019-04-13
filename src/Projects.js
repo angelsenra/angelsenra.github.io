@@ -22,6 +22,15 @@ const icons = {
   "yadkee/uniquify": ["photo", "grey"]
 };
 
+const languages = {
+  "python": "blue",
+  "c": "black",
+  "c++": "black",
+  "react": "pink",
+  "materialize": "pink",
+  "java": "orange"
+};
+
 
 function Repository(props) {
   const link = "https://github.com/" + props.name;
@@ -33,8 +42,13 @@ function Repository(props) {
     const iconv = icons[props.name];
     icon = <i className={"material-icons circle " + iconv[1]}>{iconv[0]}</i>
   }
-  const tags = props.tags.map((tag) =>
-    <span className="github-tag badge new" data-badge-caption={tag}></span>
+  const tags = props.tags.map((tag) => {
+    if (tag in languages) {
+      return <span className={"github-tag badge new " + languages[tag]} data-badge-caption={tag}></span>;
+    } else {
+      return <span className="github-tag badge new teal" data-badge-caption={tag}></span>;
+    }
+  }
   );
   const archived = (props.archived ?
     <span className="github-archived badge new red" data-badge-caption="Archived"></span>
