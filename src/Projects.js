@@ -69,11 +69,17 @@ function Repository(props) {
   return (
     <li className="collection-item avatar">
       {icon}
-      <span className="title"><a href={link}>{props.name}</a></span>
-      <span className="github-updated">Updated {updated_delta} ago</span>
-      {archived}
-      <p className="black-text">{props.description}</p>
-      {tags}
+      <div className="github-repository">
+        <span className="title"><a href={link}>{props.name}</a></span>
+        <span className="show-on-med-and-up">&ensp;</span>
+        <br className="hide-on-med-and-up" />
+        <span className="github-updated">Updated {updated_delta} ago</span>
+        {archived}
+        <p className="black-text">{props.description}</p>
+        <div className="clear">
+          {tags}
+        </div>
+      </div>
       <div className="secondary-content">
         <a href={link}><i className="material-icons github-star">star</i></a>
         <br />

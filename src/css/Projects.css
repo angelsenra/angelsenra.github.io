@@ -15,12 +15,18 @@
   text-align: center;
 }
 
-.github-updated {
-  padding-left: 1em;
-}
-
 .github-archived {
   float: none !important;
+}
+
+.clear:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.github-repository {
+  margin-right: 30px;
 }
 
 /*# sourceMappingURL=Projects.css.map */

@@ -52,7 +52,7 @@ class App extends Component {
               You can find many ways of contacting me on your left!
               <br />
               <br />
-              If you are having any problem with the sidenav here you have my email: yadkee@gmail.com
+              In case that you are having any problem with the sidenav here you have my email: yadkee@gmail.com
             </p>
           </div>
         </div>
