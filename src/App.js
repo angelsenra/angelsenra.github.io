@@ -3,6 +3,7 @@ import './css/App.css';
 import MySidenav from './Sidenav';
 import MyTimeline from './Timeline';
 import MyAwards from './Awards';
+import MyProjects from './Projects';
 import M from 'materialize-css';
 
 class App extends Component {
@@ -43,12 +44,13 @@ class App extends Component {
             <MyAwards />
 
             <h3 className="center-align" id="projects">Projects</h3>
-            To be completed
+            <MyProjects />
 
             <h3 className="center-align" id="projects">Contact</h3>
             <p className="flow-text">
               <a href="#about" data-target="slide-out" className="sidenav-trigger"><i className="material-icons medium">chevron_left</i></a>
               You can find many ways of contacting me on your left!
+              <br />
               <br />
               If you are having any problem with the sidenav here you have my email: yadkee@gmail.com
             </p>

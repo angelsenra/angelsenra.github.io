@@ -1,0 +1,26 @@
+.github-tag {
+  float: left !important;
+  margin-left: 0 !important;
+  margin-right: 14px !important;
+  opacity: 0.5;
+}
+
+.github-license {
+  margin-left: 0 !important;
+  padding: 0 !important;
+}
+
+.github-star {
+  width: 100%;
+  text-align: center;
+}
+
+.github-updated {
+  padding-left: 1em;
+}
+
+.github-archived {
+  float: none !important;
+}
+
+/*# sourceMappingURL=Projects.css.map */
