@@ -14,11 +14,11 @@ class App extends Component {
     return (
       <div>
         <MySidenav />
-        <div id="main" class="grey-text text-darken-2">
-          <div class="container">
-            <a href="#about" data-target="slide-out" class="sidenav-trigger"><i class="material-icons medium">menu</i></a>
-            <h3 class="center-align" id="about">About me</h3>
-            <p class="flow-text">
+        <div id="main" className="grey-text text-darken-2">
+          <div className="container">
+            <a href="#about" data-target="slide-out" className="sidenav-trigger"><i className="material-icons medium">menu</i></a>
+            <h3 className="center-align" id="about">About me</h3>
+            <p className="flow-text">
               Hello!
               <br />
               My name is Angel. I'm a somewhat eclectic programmer.
@@ -36,19 +36,21 @@ class App extends Component {
               Below you will find more information about me and the projects I have worked on.
             </p>
 
-            <h3 class="center-align" id="experience">Experience & Education</h3>
+            <h3 className="center-align" id="experience">Experience & Education</h3>
             <MyTimeline />
 
-            <h3 class="center-align" id="competitions">Competitions & Awards</h3>
+            <h3 className="center-align" id="competitions">Competitions & Awards</h3>
             <MyAwards />
 
-            <h3 class="center-align" id="projects">Projects</h3>
+            <h3 className="center-align" id="projects">Projects</h3>
             To be completed
 
-            <h3 class="center-align" id="projects">Contact</h3>
-            <p class="flow-text">
-              <a href="#about" data-target="slide-out" class="sidenav-trigger"><i class="material-icons medium">chevron_left</i></a>
+            <h3 className="center-align" id="projects">Contact</h3>
+            <p className="flow-text">
+              <a href="#about" data-target="slide-out" className="sidenav-trigger"><i className="material-icons medium">chevron_left</i></a>
               You can find many ways of contacting me on your left!
+              <br />
+              If you are having any problem with the sidenav here you have my email: yadkee@gmail.com
             </p>
           </div>
         </div>

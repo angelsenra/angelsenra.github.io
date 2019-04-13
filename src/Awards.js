@@ -3,19 +3,19 @@ import './css/Awards.css';
 import M from 'materialize-css';
 
 function Award(props) {
-  const winner = (props.winner ? <i class="material-icons orange-text">stars</i> : null);
-  const group = (props.group ? <i class="material-icons purple-text">group</i> : null);
+  const winner = (props.winner ? <i className="material-icons orange-text">stars</i> : null);
+  const group = (props.group ? <i className="material-icons purple-text">group</i> : null);
   const badge = (props.winner ?
-    <span class="badge new" data-badge-caption="">{props.badge}</span>
+    <span className="badge new" data-badge-caption="">{props.badge}</span>
     :
-    <span class="badge">{props.badge}</span>
+    <span className="badge">{props.badge}</span>
   )
   return (
     <li>
-      <div class="collapsible-header">
+      <div className="collapsible-header">
         {winner}{group}{props.what}{badge}
       </div>
-      <div class="collapsible-body">
+      <div className="collapsible-body">
         {props.description}
       </div>
     </li>
@@ -30,7 +30,7 @@ function Awards(props) {
     <Award {...event} />
   );
   return (
-    <ul class={_class}>{listItems}</ul>
+    <ul className={_class}>{listItems}</ul>
   );
 }
 
@@ -44,7 +44,7 @@ class MyAwards extends Component {
 
   render() {
     return (
-      <Awards class="expandable no-autoinit" events={[
+      <Awards className="expandable no-autoinit" events={[
         {
           "winner": true,
           "what": "March 2019 - Programming contest for quantitative trading",

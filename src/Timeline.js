@@ -4,17 +4,17 @@ import './css/Timeline.css';
 
 function When(props) {
   return (
-    <h6 class="text-darken-2">{props.when}</h6>
+    <h6 className="text-darken-2">{props.when}</h6>
   );
 }
 
 function Where(props) {
   let title;
   if (props.type === "info") {
-    title = (<h5 class="text-darken-4">{props.where}</h5>);
+    title = (<h5 className="text-darken-4">{props.where}</h5>);
   }
   else {
-    title = (<h6 class="text-darken-4">{props.where}</h6>);
+    title = (<h6 className="text-darken-4">{props.where}</h6>);
   }
   if (props.where_link) {
     return (<a href={props.where_link}>{title}</a>);
@@ -28,18 +28,18 @@ function TimelineEvent(props) {
   let content;
   if (props.type === "info") {
     content = (
-      <div class="card timeline-content">
-        <div class="card-content">
-          <div class="card-title activator">
-            <i class="material-icons right">keyboard_arrow_up</i>
+      <div className="card timeline-content">
+        <div className="card-content">
+          <div className="card-title activator">
+            <i className="material-icons right">keyboard_arrow_up</i>
             <When {...props} />
             <Where {...props} />
             <i>{props.what}</i>
           </div>
         </div>
-        <div class="card-reveal">
-          <span class="card-title">
-            What<i class="material-icons right">close</i>
+        <div className="card-reveal">
+          <span className="card-title">
+            What<i className="material-icons right">close</i>
           </span>
           <p>{props.description}</p>
         </div>
@@ -47,18 +47,18 @@ function TimelineEvent(props) {
     );
   } else if (props.type === "tabs") {
     content = (
-      <div class="card timeline-content">
-        <div class="card-content">
+      <div className="card timeline-content">
+        <div className="card-content">
           <When {...props} />
           <p>{props.what}</p>
         </div>
-        <div class="card-tabs">
-          <ul class="tabs tabs-fixed-width">
-            <li class="tab"><a href={"#" + props.alias + "-0"}>What</a></li>
-            <li class="tab"><a class="active" href={"#" + props.alias + "-1"}>Where</a></li>
+        <div className="card-tabs">
+          <ul className="tabs tabs-fixed-width">
+            <li className="tab"><a href={"#" + props.alias + "-0"}>What</a></li>
+            <li className="tab"><a className="active" href={"#" + props.alias + "-1"}>Where</a></li>
           </ul>
         </div>
-        <div class="card-content lighten-4">
+        <div className="card-content lighten-4">
           <div id={props.alias + "-0"}>{props.description}</div>
           <div id={props.alias + "-1"}><Where {...props} /></div>
         </div>
@@ -67,10 +67,10 @@ function TimelineEvent(props) {
   }
 
   return (
-    <li class="timeline-event">
+    <li className="timeline-event">
       {content}
-      <div class={"timeline-badge " + props.color}>
-        <i class="material-icons">{props.icon}</i>
+      <div className={"timeline-badge " + props.color}>
+        <i className="material-icons">{props.icon}</i>
       </div>
     </li>
   );
@@ -83,7 +83,7 @@ function Timeline(props) {
     <TimelineEvent {...event} />
   );
   return (
-    <ul class="timeline">{listItems}</ul>
+    <ul className="timeline">{listItems}</ul>
   );
 }
 
