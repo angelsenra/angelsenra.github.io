@@ -1,52 +1,48 @@
 import React, { Component } from 'react';
-import './css/Projects.css';
+import './css/projects.css';
 
-const icons = {
-  "yadkee/yadkee.github.io": ["web", "blue"],
-  "yadkee/euler": ["functions", "green"],
-  "yadkee/calendar": ["event", "teal"],
-  "yadkee/tictactoe": ["grid_on", "red"],
-  "yadkee/knowledge": ["bookmark_border", "black"],
-  "yadkee/orphans": ["folder_open", "cyan"],
+const ICONS = {
+  "yadkee/c21-fastly-api-tool": ["vpn_lock", "red"],
+  "yadkee/c21-ts-parser": ["movie", "orange"],
+  "yadkee/competition-toolkit": ["functions", "black"],
   "yadkee/dailyprogrammer": ["forum", "orange"],
-  "yadkee/spaghetti": ["mood", "purple"],
-  "yadkee/TeleManager": ["near_me", "blue"],
-  "yadkee/TsParser": ["movie", "orange"],
-  "yadkee/HPcodewarsMadrid2018": ["insert_comment", "teal"],
-  "yadkee/CiresFastlyApiTool": ["vpn_lock", "red"],
+  "yadkee/euler": ["functions", "green"],
+  "yadkee/example-repo": ["folder", "green"],
+  "yadkee/hpcodewars-madrid-2018": ["insert_comment", "teal"],
+  "yadkee/knowledge": ["bookmark_border", "black"],
+  "yadkee/machine-learning": ["share", "pink"],
   "yadkee/minesweeper": ["videogame_asset", "grey"],
-  "yadkee/personal_computer": ["computer", "grey"],
-  "yadkee/compTK": ["functions", "black"],
-  "yadkee/heroku_main": ["person_outline", "purple"],
-  "yadkee/machine_learning": ["share", "pink"],
-  "yadkee/uniquify": ["photo", "grey"]
+  "yadkee/orphans": ["folder_open", "cyan"],
+  "yadkee/personal-computer": ["computer", "grey"],
+  "yadkee/sleep-tracking": ["event", "teal"],
+  "yadkee/spaghetti": ["mood", "purple"],
+  "yadkee/tictactoe": ["grid_on", "red"],
+  "yadkee/yadkee.github.io": ["web", "blue"],
 };
 
-const languages = {
+const LANGUAGES = {
   "python": "blue",
   "c": "black",
   "c++": "black",
   "react": "pink",
   "materialize": "pink",
-  "java": "orange"
 };
 
 
 function Repository(props) {
+  let icon;
   const link = "https://github.com/" + props.name;
-  let icon = (props.icon ?
-    <i className={"material-icons circle " + props.color}>{props.icon}</i>
-    : null
-  );
-  if (icon === null && props.name in icons) {
-    const iconv = icons[props.name];
-    icon = <i className={"material-icons circle " + iconv[1]}>{iconv[0]}</i>
+  if (props.name in ICONS) {
+    const icon_tuple = ICONS[props.name];
+    icon = <i className={"material-icons circle " + icon_tuple[1]}>{icon_tuple[0]}</i>
+  } else {
+    icon = <i className={"material-icons circle black-text"}>help_outline</i>
   }
   const tags = props.tags.map((tag) => {
-    if (tag in languages) {
-      return <span className={"github-tag badge new " + languages[tag]} data-badge-caption={tag}></span>;
+    if (tag in LANGUAGES) {
+      return <span className={"github-tag badge new " + LANGUAGES[tag]} data-badge-caption={tag}></span>;
     } else {
-      return <span className="github-tag badge new teal" data-badge-caption={tag}></span>;
+      return <span className="github-tag badge new" data-badge-caption={tag}></span>;
     }
   }
   );

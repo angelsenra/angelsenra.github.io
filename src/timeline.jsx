@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/Timeline.css';
+import './css/timeline.css';
 
 
 function When(props) {

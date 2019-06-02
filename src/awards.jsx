@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/Awards.css';
+import './css/awards.css';
 import M from 'materialize-css';
 
 function Award(props) {
