@@ -10,6 +10,8 @@ import Blog from './blog.jsx';
 render (
   <Router>
     <div>
+      <Route path="/build/" exact component={App} />
+      <Route path="/build/blog/" component={Blog} />
       <Route path="/" exact component={App} />
       <Route path="/blog/" component={Blog} />
     </div>
