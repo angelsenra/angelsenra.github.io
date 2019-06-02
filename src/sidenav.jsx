@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/sidenav.css';
+import me from './me.png'
 
 import { Link } from "react-router-dom";
 
@@ -15,7 +16,7 @@ function MySidenav(props) {
         <li><a href="#about"><i className="material-icons">home</i><b>Home</b></a></li>
         {/*<li><a href="#!"><i className="material-icons">star_border</i>Skills</a></li>*/}
         <li><a href="#projects"><i className="material-icons">lightbulb_outline</i>Projects</a></li>
-        <li><Link to="blog"><i className="material-icons">code</i>Blog</Link></li>
+        <li><Link to="/blog"><i className="material-icons">code</i>Blog</Link></li>
       </div>
     );
   }
@@ -27,7 +28,7 @@ function MySidenav(props) {
           <div className="container">
             <div className="row">
               <div className="col s6 l12">
-                <img src="me.png" alt="" className="circle responsive-img" />
+                <img src={me} alt="" className="circle responsive-img" />
               </div>
               <div className="col s6 l12">
                 <h4 className="black-text">Ángel Senra</h4>
