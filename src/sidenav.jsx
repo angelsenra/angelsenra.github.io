@@ -15,7 +15,7 @@ function MySidenav(props) {
         <li><a href="#about"><i className="material-icons">home</i><b>Home</b></a></li>
         {/*<li><a href="#!"><i className="material-icons">star_border</i>Skills</a></li>*/}
         <li><a href="#projects"><i className="material-icons">lightbulb_outline</i>Projects</a></li>
-        <li><Link to="/blog"><i className="material-icons">code</i>Blog</Link></li>
+        <li><Link to="blog"><i className="material-icons">code</i>Blog</Link></li>
       </div>
     );
   }
