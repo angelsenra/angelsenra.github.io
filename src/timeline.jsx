@@ -94,10 +94,15 @@ function MyTimeline(props) {
       {
         "type": "info",
         "when": "July 2018 - [...]",
-        "what": "Freelance",
+        "what": "Software Engineer",
         "where": "Cires21",
         "where_link": "http://www.cires21.com/en",
-        "description": "REST API developer & more",
+        "description": (
+          <div>
+            Design and development of the saas platform<br />
+            Direct comunication with clients and third parties
+          </div>
+        ),
         "icon": "work",
         "color": "red white-text"
       },
@@ -105,20 +110,20 @@ function MyTimeline(props) {
         "alias": "University",
         "type": "tabs",
         "when": "2018 - 2022",
-        "what": "Double degree in Software Engineering and Technologies for the Society of Information",
+        "what": "Degree in Software Engineering",
         "where": "Technical University of Madrid",
         "where_link": "http://www.upm.es/",
-        "description": ".",
+        "description": "First year average: 7.4",
         "icon": "school",
         "color": "blue white-text"
       },
       {
         "type": "info",
         "when": "February 2018 - May 2018",
-        "what": "Freelance",
+        "what": "Freelance Software Engineer",
         "where": "KSNetwork.es",
         "where_link": "https://ksnetwork.es",
-        "description": "Together we innovated in the creation of match analysis tools, improving the experience of players and organizers.",
+        "description": "Together we innovated in the creation of match analysis tools, improving the experience of players and organizers",
         "icon": "work",
         "color": "orange white-text"
       },
@@ -129,7 +134,7 @@ function MyTimeline(props) {
         "what": "Baccalourate - Technological",
         "where": "IES Ramiro de Maeztu",
         "where_link": "http://www.educa.madrid.org/web/ies.ramirodemaeztu.madrid/",
-        "description": ".",
+        "description": "Attended multiple clubs including a programming one. It was the reason why I participated in HP Codewars Madrid 2018",
         "icon": "school",
         "color": "blue lighten-2 white-text"
       },
@@ -139,7 +144,7 @@ function MyTimeline(props) {
         "what": "Internship '4+ empresa Comunidad de Madrid​'",
         "where": "Fullcircle",
         "where_link": "https://www.fullcircle.es/",
-        "description": "At Fullcircle I was introduced to the worklife.",
+        "description": "At Fullcircle I was introduced to the worklife",
         "icon": "work",
         "color": "green white-text"
       },
@@ -150,7 +155,7 @@ function MyTimeline(props) {
         "what": "Secondary education with honors",
         "where": "CEIP Nuestra Señora de las Nieves",
         "where_link": "https://colegionsnieves.es/",
-        "description": ".",
+        "description": "Received honorable mention from the community of Madrid",
         "icon": "school",
         "color": "blue lighten-4 white-text"
       }

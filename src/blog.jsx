@@ -17,7 +17,9 @@ class Blog extends Component {
             <a href="#blog" data-target="slide-out" className="sidenav-trigger"><i className="material-icons medium">menu</i></a>
             <h3 className="center-align" id="about">Blog</h3>
             <p className="flow-text">
-              Let's pretend this is a blog
+              Let's pretend this is a blog - 02/06/2019
+              <br />
+              I promise I'm going to do this at some point - 01/09/2019
             </p>
           </div>
         </div>

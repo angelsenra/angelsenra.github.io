@@ -25,7 +25,7 @@ class App extends Component {
               My name is Angel. I'm a somewhat eclectic programmer.
               <br />
               <br />
-              I love working on new things and technologies I don't know.  Routine kills me, but when a project becomes a challenge I can't stop working on it.
+              I love working on new things and technologies I don't know. Routine kills me, but when a project becomes a challenge I can't stop working on it.
               <br />
               Being self-taught for so long has made me very quick to learn new things and handle myself well.
               <br />
