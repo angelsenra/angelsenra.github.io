@@ -31,16 +31,13 @@ function MySidenav(props) {
                 <img src={me} alt="" className="circle responsive-img" />
               </div>
               <div className="col s6 l12">
-                <h4 className="black-text">Ángel Senra</h4>
-                <h6 className="black-text">yadkee</h6>
+                <h4 className="black-text">Angel Senra</h4>
               </div>
             </div>
             <div className="icon-bar">
               <a className="center-align" href="https://github.com/yadkee" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-              <a className="center-align" href="https://www.linkedin.com/in/yadkee/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+              <a className="center-align" href="https://www.linkedin.com/in/angelsenra/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
               <a className="center-align" href="mailto:yadkee@gmail.com"><i className="fas fa-envelope"></i></a>
-              <a className="center-align" href="https://twitter.com/imyadkee" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
-              <a className="center-align" href="https://telegram.me/yadkee" target="_blank" rel="noopener noreferrer"><i className="fab fa-telegram"></i></a>
             </div>
           </div>
         </li>
