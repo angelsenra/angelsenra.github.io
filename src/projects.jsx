@@ -125,7 +125,7 @@ class MyProjects extends Component {
           const child = (
             <Repository name={repo.full_name} description={repo.description}
               updated={repo.updated_at} archived={repo.archived}
-              tags={repo.topics} license={repo.license.spdx_id} />
+              tags={repo.topics} license={repo.license?.spdx_id} />
           );
           childs.push(child);
         }

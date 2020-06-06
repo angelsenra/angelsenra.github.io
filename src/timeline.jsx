@@ -93,7 +93,21 @@ function MyTimeline(props) {
     <Timeline events={[
       {
         "type": "info",
-        "when": "July 2018 - [...]",
+        "when": "October 2019 - [...]",
+        "what": "Backend Software Engineer",
+        "where": "Usersnap",
+        "where_link": "http://www.usersnap.com",
+        "description": (
+          <div>
+            Development of the usersnap product
+          </div>
+        ),
+        "icon": "work",
+        "color": "blue white-text"
+      },
+      {
+        "type": "info",
+        "when": "July 2018 - October 2019",
         "what": "Software Engineer",
         "where": "Cires21",
         "where_link": "http://www.cires21.com/en",
