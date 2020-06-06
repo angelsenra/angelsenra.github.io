@@ -9,7 +9,7 @@ class MySidenav extends React.Component {
     window.goatcounter.count({
       event: true,
       path: (p) =>
-        window.location.host + window.location.pathname || "/" + window.location.hash + "&ext=" + event.currentTarget.href,
+        window.location.host + (window.location.pathname || "/") + window.location.hash + "&ext=" + event.currentTarget.href,
     })
   }
 
