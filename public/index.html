@@ -19,6 +19,35 @@
 <body class="grey darken-4">
   <noscript class="hide">You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+  <script>
+    window.goatcounter = {
+      allow_local: true,
+      path: (p) => location.host + p + location.hash,
+      referrer: () => {
+        const ref = goatcounter.get_query('ref')
+        const utm_source = goatcounter.get_query('utm_source')
+        const utm_campaign = goatcounter.get_query('utm_campaign')
+        return (
+          document.referrer +
+          (ref ? `&ref=${ref}` : "") +
+          (utm_source ? `&utm_source=${utm_source}` : "") +
+          (utm_campaign ? `&utm_campaign=${utm_campaign}` : "")
+        )
+      }
+    }
+    // You can use navigator.sendBeacon() with GoatCounter, for example to send events when someone closes a page:
+    const t = setInterval(() => {
+      if (goatcounter && goatcounter.filter && goatcounter.count) {
+        clearInterval(t)
+        if (!goatcounter.filter()) {
+          navigator.sendBeacon(goatcounter.url({
+            event: true,
+            path: (p) => "unload-" + location.host + p + location.hash,
+          }))
+        }
+      }
+    }, 100)
+  </script>
   <script data-goatcounter="https://yadkee.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 
