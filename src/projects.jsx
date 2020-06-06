@@ -38,11 +38,11 @@ function Repository(props) {
   } else {
     icon = <i className={"material-icons circle black-text"}>help_outline</i>
   }
-  const tags = props.tags.map((tag) => {
+  const tags = props.tags.map((tag, i) => {
     if (tag in LANGUAGES) {
-      return <span className={"github-tag badge new " + LANGUAGES[tag]} data-badge-caption={tag}></span>;
+      return <span key={i} className={"github-tag badge new " + LANGUAGES[tag]} data-badge-caption={tag}></span>;
     } else {
-      return <span className="github-tag badge new" data-badge-caption={tag}></span>;
+      return <span key={i} className="github-tag badge new" data-badge-caption={tag}></span>;
     }
   }
   );
@@ -123,7 +123,7 @@ class MyProjects extends Component {
             continue;
           }
           const child = (
-            <Repository name={repo.full_name} description={repo.description}
+            <Repository key={i} name={repo.full_name} description={repo.description}
               updated={repo.updated_at} archived={repo.archived}
               tags={repo.topics} license={repo.license?.spdx_id} />
           );

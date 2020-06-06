@@ -26,8 +26,8 @@ function Award(props) {
 function Awards(props) {
   const _class = "collapsible" + (props.class ? " " + props.class : "");
   const events = props.events;
-  const listItems = events.map((event) =>
-    <Award {...event} />
+  const listItems = events.map((event, i) =>
+    <Award key={i} {...event} />
   );
   return (
     <ul className={_class}>{listItems}</ul>

@@ -79,8 +79,8 @@ function TimelineEvent(props) {
 
 function Timeline(props) {
   const events = props.events;
-  const listItems = events.map((event) =>
-    <TimelineEvent {...event} />
+  const listItems = events.map((event, i) =>
+    <TimelineEvent key={i} {...event} />
   );
   return (
     <ul className="timeline">{listItems}</ul>
@@ -98,9 +98,9 @@ function MyTimeline(props) {
         "where": "Usersnap",
         "where_link": "http://www.usersnap.com",
         "description": (
-          <div>
+          <span>
             Development of the usersnap product
-          </div>
+          </span>
         ),
         "icon": "work",
         "color": "blue white-text"
@@ -112,10 +112,10 @@ function MyTimeline(props) {
         "where": "Cires21",
         "where_link": "http://www.cires21.com/en",
         "description": (
-          <div>
+          <span>
             Design and development of the saas platform<br />
             Direct comunication with clients and third parties
-          </div>
+          </span>
         ),
         "icon": "work",
         "color": "red white-text"
