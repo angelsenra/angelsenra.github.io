@@ -21,8 +21,9 @@
   <div id="root"></div>
   <script>
     window.goatcounter = {
+      no_onload: true,
       allow_local: true,
-      path: (p) => location.host + location.pathname || "/" + location.hash,
+      path: (p) => location.host + (location.pathname || "/") + location.hash,
       referrer: () => {
         const ref = goatcounter.get_query('ref')
         const utm_source = goatcounter.get_query('utm_source')
@@ -35,6 +36,13 @@
         )
       }
     }
+    const t = setInterval(() => {
+      if (goatcounter && goatcounter.filter && goatcounter.count) {
+        clearInterval(t)
+        goatcounter.count()
+        history.pushState("", document.title, location.pathname)
+      }
+    }, 100)
   </script>
   <script data-goatcounter="https://yadkee.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
