@@ -22,6 +22,13 @@ function Award(props) {
   )
 }
 
+const onLinkClick = async (event) => {
+  window.goatcounter.count({
+    event: true,
+    path: (p) =>
+      window.location.host + window.location.pathname || "/" + window.location.hash + "&ext=" + event.currentTarget.href,
+  })
+}
 
 function Awards(props) {
   const _class = "collapsible" + (props.class ? " " + props.class : "");
@@ -54,7 +61,7 @@ class MyAwards extends Component {
               <br />
               It was a competition organized to hire a Python/C# developer at
               &ensp;
-              <a href="http://www.causality-group.com/">Casuality Group</a>.
+              <a href="http://www.causality-group.com/" onClick={onLinkClick}>Casuality Group</a>.
               <br />
               I managed to win in half an hour so I guess there were not many contestants.
               <br />
@@ -86,10 +93,10 @@ class MyAwards extends Component {
           "what": "June 2018 - Spanish Olympics of Informatic",
           "description": (
             <div>
-              In spanish <a href="https://olimpiada-informatica.org/">OIE</a>,
+              In spanish <a href="https://olimpiada-informatica.org/" onClick={onLinkClick}>OIE</a>,
               It is the spanish clasificatory round for the
               &ensp;
-              <a href="https://ioinformatics.org/">IOI</a>.
+              <a href="https://ioinformatics.org/" onClick={onLinkClick}>IOI</a>.
               <br />
               The level was high and I was overtaken by mathematicians and physicists.
               <br />
@@ -122,7 +129,7 @@ class MyAwards extends Component {
           "what": "March 2018 - HP CodeWars Barcelona",
           "description": (
             <div>
-              <a href="http://www.hpcodewarsbcn.com/">
+              <a href="http://www.hpcodewarsbcn.com/" onClick={onLinkClick}>
                 HP Codewars Barcelona
               </a>
               &ensp;
@@ -144,17 +151,17 @@ class MyAwards extends Component {
           "what": "February 2018 - HP CodeWars Madrid",
           "description": (
             <div>
-              <a href="https://hpscds.com/codewars/madrid-es">
+              <a href="https://hpscds.com/codewars/madrid-es" onClick={onLinkClick}>
                 HP Codewars Madrid
               </a>
               ,&ensp;
-              <a href="https://www.europapress.es/portaltic/sector/noticia-hp-celebra-madrid-competicion-educativa-codewars-alumnos-11-centros-escolares-20180226151259.html">
+              <a href="https://www.europapress.es/portaltic/sector/noticia-hp-celebra-madrid-competicion-educativa-codewars-alumnos-11-centros-escolares-20180226151259.html" onClick={onLinkClick}>
                 Article about it with a picture of us
               </a>
               &ensp;
               It was the first programming contest I participed in.
               <br />
-              <a href="https://twitter.com/enriqcg">Enriqcg</a> and I were able to climb to the top
+              <a href="https://twitter.com/enriqcg" onClick={onLinkClick}>Enriqcg</a> and I were able to climb to the top
               and stay there for the rest of the competition.
               <br />
               That day I fell asleep and arrived late so it was good to turn the day around and win.

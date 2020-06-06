@@ -20,6 +20,8 @@ class Blog extends Component {
               Let's pretend this is a blog - 02/06/2019
               <br />
               I promise I'm going to do this at some point - 01/09/2019
+              <br />
+              I will not procrastinate forever - 6jun'20
             </p>
           </div>
         </div>

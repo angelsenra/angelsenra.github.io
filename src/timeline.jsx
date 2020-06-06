@@ -2,6 +2,14 @@ import React from 'react';
 import './css/timeline.css';
 
 
+const onLinkClick = async (event) => {
+  window.goatcounter.count({
+    event: true,
+    path: (p) =>
+      window.location.host + window.location.pathname || "/" + window.location.hash + "&ext=" + event.currentTarget.href,
+  })
+}
+
 function When(props) {
   return (
     <h6 className="text-darken-2">{props.when}</h6>
@@ -17,7 +25,7 @@ function Where(props) {
     title = (<h6 className="text-darken-4">{props.where}</h6>);
   }
   if (props.where_link) {
-    return (<a href={props.where_link}>{title}</a>);
+    return (<a href={props.where_link} onClick={onLinkClick}>{title}</a>);
   } else {
     return title;
   }

@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 
 class MySidenav extends React.Component {
   onLinkClick = async (event) => {
-    console.log(event.currentTarget.href)
     window.goatcounter.count({
       event: true,
-      path: (p) => window.location.host + p + window.location.hash + "&ext=" + event.currentTarget.href,
+      path: (p) =>
+        window.location.host + window.location.pathname || "/" + window.location.hash + "&ext=" + event.currentTarget.href,
     })
   }
 

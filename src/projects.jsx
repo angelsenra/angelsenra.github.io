@@ -28,6 +28,13 @@ const LANGUAGES = {
   "materialize": "pink",
 };
 
+const onLinkClick = async (event) => {
+  window.goatcounter.count({
+    event: true,
+    path: (p) =>
+      window.location.host + window.location.pathname || "/" + window.location.hash + "&ext=" + event.currentTarget.href,
+  })
+}
 
 function Repository(props) {
   let icon;
@@ -80,7 +87,7 @@ function Repository(props) {
     <li className="collection-item avatar">
       {icon}
       <div className="github-repository">
-        <span className="title"><a href={link}>{props.name}</a></span>
+        <span className="title"><a href={link} onClick={onLinkClick}>{props.name}</a></span>
         <span className="show-on-med-and-up">&ensp;</span>
         <br className="hide-on-med-and-up" />
         <span className="github-updated">Updated {updated_delta} ago</span>
@@ -91,7 +98,7 @@ function Repository(props) {
         </div>
       </div>
       <div className="secondary-content">
-        <a href={link}><i className="material-icons github-star">star</i></a>
+        <a href={link} onClick={onLinkClick}><i className="material-icons github-star">star</i></a>
         <br />
         <span className="badge github-license">MIT</span>
       </div>

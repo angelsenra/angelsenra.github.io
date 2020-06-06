@@ -22,7 +22,7 @@
   <script>
     window.goatcounter = {
       allow_local: true,
-      path: (p) => location.host + p + location.hash,
+      path: (p) => location.host + location.pathname || "/" + location.hash,
       referrer: () => {
         const ref = goatcounter.get_query('ref')
         const utm_source = goatcounter.get_query('utm_source')
@@ -42,7 +42,7 @@
         if (!goatcounter.filter()) {
           navigator.sendBeacon(goatcounter.url({
             event: true,
-            path: (p) => "unload-" + location.host + p + location.hash,
+            path: (p) => "unload-" + location.host + location.pathname || "/" + location.hash,
           }))
         }
       }
