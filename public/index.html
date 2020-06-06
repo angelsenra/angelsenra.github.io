@@ -20,27 +20,29 @@
   <noscript class="hide">You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <script>
+    const getReferrer = () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const ref = urlParams.get('ref')
+      const utm_source = urlParams.get('utm_source')
+      const utm_campaign = urlParams.get('utm_campaign')
+      return (
+        document.referrer +
+        (ref ? `&ref=${ref}` : "") +
+        (utm_source ? `&utm_source=${utm_source}` : "") +
+        (utm_campaign ? `&utm_campaign=${utm_campaign}` : "")
+      )
+    }
     window.goatcounter = {
       no_onload: true,
       allow_local: true,
-      path: (p) => location.host + (location.pathname || "/") + location.hash,
-      referrer: () => {
-        const ref = goatcounter.get_query('ref')
-        const utm_source = goatcounter.get_query('utm_source')
-        const utm_campaign = goatcounter.get_query('utm_campaign')
-        return (
-          document.referrer +
-          (ref ? `&ref=${ref}` : "") +
-          (utm_source ? `&utm_source=${utm_source}` : "") +
-          (utm_campaign ? `&utm_campaign=${utm_campaign}` : "")
-        )
-      }
+      path: (p) => window.location.host + (window.location.pathname || "/") + window.location.hash,
+      referrer: getReferrer()
     }
     const t = setInterval(() => {
-      if (goatcounter && goatcounter.filter && goatcounter.count) {
+      if (window.goatcounter && window.goatcounter.filter && window.goatcounter.count) {
         clearInterval(t)
-        goatcounter.count()
-        history.pushState("", document.title, location.pathname)
+        window.goatcounter.count()
+        history.pushState("", window.document.title, window.location.pathname)
       }
     }, 100)
   </script>
