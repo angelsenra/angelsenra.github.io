@@ -20,31 +20,24 @@
   <noscript class="hide">You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <script>
-    const getReferrer = () => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const ref = urlParams.get('ref')
-      const utm_source = urlParams.get('utm_source')
-      const utm_campaign = urlParams.get('utm_campaign')
-      return (
-        document.referrer +
-        (ref ? `&ref=${ref}` : "") +
-        (utm_source ? `&utm_source=${utm_source}` : "") +
-        (utm_campaign ? `&utm_campaign=${utm_campaign}` : "")
-      )
-    }
+    // Filter referrer search params
+    const url = new URL(window.location.toString())
+    const { ref, utm_source, utm_campaign, ...otherParams } = Object.fromEntries(url.searchParams.entries())
+    url.search = new URLSearchParams(Object.entries(otherParams)).toString()
+    window.history.replaceState("", window.document.title, url.toString())
+    // Set referrer and cache in sessionStorage
+    const referrer = sessionStorage.getItem("referrer") ||
+      Object.entries({ referrer: window.document.referrer, ref, utm_source, utm_campaign })
+        .filter(([key, value]) => value)
+        .map(([key, value]) => `${key}=${value}`)
+        .join("&")
+    sessionStorage.setItem("referrer", referrer)
+    // Configure goatcounter
     window.goatcounter = {
-      no_onload: true,
       allow_local: true,
-      path: (p) => window.location.host + (window.location.pathname || "/") + window.location.hash,
-      referrer: getReferrer()
+      path: (p) => window.location.host + p + window.location.hash,
+      referrer: referrer
     }
-    const t = setInterval(() => {
-      if (window.goatcounter && window.goatcounter.filter && window.goatcounter.count) {
-        clearInterval(t)
-        window.goatcounter.count()
-        history.pushState("", window.document.title, window.location.pathname)
-      }
-    }, 100)
   </script>
   <script data-goatcounter="https://yadkee.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
