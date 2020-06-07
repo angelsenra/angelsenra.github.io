@@ -11,6 +11,9 @@ class Container extends React.Component {
     // https://github.com/ReactTraining/react-router/issues/3554
     this.unlisten = this.props.history.listen((location, action) => {
       window.goatcounter.count()
+      window.gtag("config", "UA-168793164-1", {
+        page_path: window.location.host + window.location.pathname + window.location.search + window.location.hash
+      })
     })
   }
 

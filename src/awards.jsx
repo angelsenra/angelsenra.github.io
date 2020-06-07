@@ -27,6 +27,10 @@ const onLinkClick = async (event) => {
     event: true,
     path: (p) => window.location.host + p + window.location.hash + "&ext=" + event.currentTarget.href,
   })
+  window.gtag("event", "click-external-link", {
+    "event_category": "link",
+    "event_label": event.currentTarget.href,
+  })
 }
 
 function Awards(props) {
