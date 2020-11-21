@@ -24,3 +24,8 @@ yarn-error.log*
 
 # Lighthouse reports
 *.report.html
+
+# Jekyll
+_site
+.sass-cache
+.jekyll-metadata
