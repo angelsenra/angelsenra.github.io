@@ -27,8 +27,6 @@ social:
   links:
     - https://github.com/angelsenra
     - https://www.linkedin.com/in/angelsenra
-minima:
-  skin: dark
 google_analytics: UA-168793164-1
 show_excerpts: true
 
@@ -38,14 +36,22 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Minima: custom header links
+header_pages:
+  - _pages/index.md
+  - _pages/blog.md
+
+include:
+  - _pages
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .gitignore
+  - CNAME
+  - docker-compose.yml
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
