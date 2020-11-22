@@ -38,6 +38,9 @@ plugins:
 
 # Minima: custom header links
 header_pages:
+  - _pages/blog.md
+
+footer_pages:
   - _pages/index.md
   - _pages/blog.md
 
