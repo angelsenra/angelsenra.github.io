@@ -1,10 +1,10 @@
 ---
 layout: page
 permalink: /about-this-website
-title: About this page
+title: About this website
 ---
 
-This website is hosted in [GitHub Pages](https://pages.github.com/) using [Jekyll](https://jekyllrb.com/)'s default plugin, [Minima](https://github.com/jekyll/minima)
+This site is hosted in [GitHub Pages](https://pages.github.com/) using [Jekyll](https://jekyllrb.com/)'s default plugin, [Minima](https://github.com/jekyll/minima)
 
 For more details about how this site works checkout the [GitHub project](https://github.com/angelsenra/angelsenra.github.io). Do you have question? feel free to reach out to me via [email](mailto:{{ site.email }})
 
