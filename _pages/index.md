@@ -13,13 +13,15 @@ Meanwhile, why don't you check out the [about me](/about-me) or the [blog](/blog
 
 And please check again in a couple of weeks. Much more info should be here. Cheers!
 
-TODOs:
+TODOs for the week starting 23 Nov:
 
-- [ ] Add bootstrap for easy css
-    - [ ] Mobile friendly
+- [x] Add blog tags
 - [ ] Add cv section with experience and awards/competitions and text about me work-wise. Work picture
     - [ ] PDF download
 - [ ] Make the about me less of a cv. Friendly picture
 - [ ] Improve the home page, decide how to link to the other pages properly
 - [ ] Google Analytics in proper account
 - [ ] SEO and page speed
+- [ ] Blog comments (disquss)
+- [ ] Contact form
+- [ ] Feedback (perhaps it's the same as the contact form)
