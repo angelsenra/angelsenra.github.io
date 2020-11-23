@@ -29,6 +29,10 @@ social:
     - https://www.linkedin.com/in/angelsenra
 google_analytics: UA-168793164-1
 show_excerpts: true
+minima:
+  date_format: "%-d %b %Y"
+disqus:
+  shortname: angelsenra
 
 # Build settings
 markdown: kramdown
