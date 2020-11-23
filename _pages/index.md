@@ -13,6 +13,7 @@ Meanwhile, why don't you check out the [about me](/about-me) or the [blog](/blog
 
 And please check again in a couple of weeks. Much more info should be here. Cheers!
 
+
 TODOs for the week starting 23 Nov:
 
 - [x] Add blog tags
