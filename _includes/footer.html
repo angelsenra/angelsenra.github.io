@@ -2,9 +2,6 @@
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <p>Contact me</p>
@@ -79,3 +76,7 @@
   </div>
 
 </footer>
+
+{%- if jekyll.environment == 'production' -%}
+  {%- include usersnap.html -%}
+{%- endif -%}

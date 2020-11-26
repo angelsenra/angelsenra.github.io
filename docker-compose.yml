@@ -3,6 +3,8 @@ version: "3"
 services:
   jekyll:
     image: bretfisher/jekyll-serve
+    environment:
+      - JEKYLL_ENV=${JEKYLL_ENV:-development}
     volumes:
       - .:/site
       - jekyll:/usr/local/bundle
