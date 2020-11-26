@@ -27,7 +27,7 @@ social:
   links:
     - https://github.com/angelsenra
     - https://www.linkedin.com/in/angelsenra
-google_analytics: UA-168793164-1
+google_site_tag: G-NQYGPDCGRJ
 show_excerpts: true
 
 minima:
@@ -44,11 +44,13 @@ plugins:
 # Minima: custom header links
 header_pages:
   - _pages/about-me.md
+  - _pages/jobs.md
   - _pages/blog.md
 
 footer_pages:
   - _pages/index.md
   - _pages/about-me.md
+  - _pages/jobs.md
   - _pages/blog.md
 
 include:

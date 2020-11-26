@@ -21,8 +21,9 @@ TODOs for the week starting 23 Nov:
     - [ ] PDF download
 - [ ] Make the about me less of a cv. Friendly picture
 - [ ] Improve the home page, decide how to link to the other pages properly
-- [ ] Google Analytics in proper account
+- [x] Google Analytics in proper account
 - [ ] SEO and page speed
-- [ ] Blog comments (disquss)
-- [ ] Contact form
-- [ ] Feedback (perhaps it's the same as the contact form)
+    - [ ] Enable sitemap Jekyll plugin
+- [x] Blog comments (disquss)
+- [x] Contact form
+- [x] Feedback (perhaps it's the same as the contact form)

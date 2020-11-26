@@ -2,64 +2,81 @@
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            Contact me
-          </li>
-          {%- if site.email -%}
+        <p>Contact me</p>
+        <ul class="clean-list">
           <li>
-            <a class="u-email" href="mailto:{{ site.email }}">
-              <img class="svg-icon" src="{{ '/assets/envelope.svg' | relative_url }}">
-              {{ site.email }}
-            </a>
+            <a href="mailto:{{ site.email }}">
+              <img class="svg-icon" src="{{ '/assets/envelope.svg' | relative_url }}"><span class="footer-contact-text">{{ site.email }}</span></a>
           </li>
-          {%- if site.github_username -%}
           <li>
             <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}">
               <svg class="svg-icon">
                 <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use>
-              </svg>
-              <span class="username">{{ site.github_username| escape }}</span>
+              </svg><span class="footer-contact-text">{{ site.github_username| escape }}</span>
             </a>
           </li>
-          {%- endif -%}
-          {%- if site.linkedin_username -%}
           <li>
             <a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}">
               <svg class="svg-icon">
                 <use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use>
-              </svg>
-              <span class="username">{{ site.linkedin_username| escape }}</span>
+              </svg><span class="footer-contact-text">{{ site.linkedin_username| escape }}</span>
             </a>
           </li>
-          {%- endif -%}
-          {%- endif -%}
+          <li>
+            <script type="text/javascript">
+              function openUsersnapContact() {
+                if (!window.usersnapGlobalApi)
+                  alert("Usersnap widget was not loaded correctly :/\nPlease try again or contact me via email")
+                else {
+                  window.usersnapGlobalApi.show("4633afd7-404e-45b3-b5e4-c31f5e93d03b")
+                }
+              }
+            </script>
+            <a class="footer-contact-link-without-icon" href="javascript:openUsersnapContact()">send a message<noscript> (requires javascript)</noscript></a>
+          </li>
         </ul>
       </div>
 
       <div class="footer-col footer-col-2">
-        {%- assign page_paths = site.footer_pages -%}
-        {%- for path in page_paths -%}
-        {%- assign my_page = site.pages | where: "path", path | first -%}
-        {%- if my_page.title -%}
-        <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a><br>
-        {%- endif -%}
-        {%- endfor -%}
+        <ul class="clean-list">
+          {%- for path in site.footer_pages -%}
+          {%-  assign my_page = site.pages | where: "path", path | first -%}
+          {%-  if my_page.title -%}
+          <li>
+            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a><br>
+          </li>
+          {%-  endif -%}
+          {%- endfor -%}
+        </ul>
       </div>
+
       <div class="footer-col footer-col-3">
         <p>{{- site.description | escape -}}</p>
-        {%- assign page = site.pages | where: "path", "_pages/about-this-website.md" | first -%}
-        {%- if page -%}
-        <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
-        {%- endif -%}
+        <ul class="clean-list">
+          {%- assign page = site.pages | where: "path", "_pages/about-this-website.md" | first -%}
+          {%- if page -%}
+          <li><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></li>
+          {%- endif -%}
+          <li>
+            <a href="https://github.com/angelsenra/angelsenra.github.io">
+              <span>
+                Go to the repo
+                <svg class="svg-icon">
+                  <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use>
+                </svg>
+              </span>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
 
   </div>
 
 </footer>
+
+{%- if jekyll.environment == 'production' -%}
+  {%- include usersnap.html -%}
+{%- endif -%}
