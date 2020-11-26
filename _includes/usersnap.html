@@ -1,0 +1,10 @@
+<script>
+  window.onUsersnapCXLoad = function(api) {
+    api.init();
+    window.usersnapGlobalApi = api;
+  }
+  var script = document.createElement('script');
+  script.defer = 1;
+  script.src = 'https://widget.usersnap.com/global/load/ba84b6fe-0c80-4fd7-90c5-f3f04c4d888e?onload=onUsersnapCXLoad';
+  document.getElementsByTagName('head')[0].appendChild(script);
+</script>

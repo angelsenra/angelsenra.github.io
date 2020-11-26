@@ -124,6 +124,10 @@
   margin-left: $spacing-unit / 4
 }
 
+.footer-contact-link-without-icon {
+  margin-left: #{$spacing-unit / 4 + 16px}
+}
+
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
   color: $grey-color;

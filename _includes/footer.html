@@ -27,6 +27,18 @@
               </svg><span class="footer-contact-text">{{ site.linkedin_username| escape }}</span>
             </a>
           </li>
+          <li>
+            <script type="text/javascript">
+              function openUsersnapContact() {
+                if (!window.usersnapGlobalApi)
+                  alert("Usersnap widget was not loaded correctly :/\nPlease try again or contact me via email")
+                else {
+                  window.usersnapGlobalApi.show("4633afd7-404e-45b3-b5e4-c31f5e93d03b")
+                }
+              }
+            </script>
+            <a class="footer-contact-link-without-icon" href="javascript:openUsersnapContact()">send a message<noscript> (requires javascript)</noscript></a>
+          </li>
         </ul>
       </div>
 
