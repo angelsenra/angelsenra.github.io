@@ -8,18 +8,18 @@
         <ul class="clean-list">
           <li>
             <a href="mailto:{{ site.email }}">
-              <img class="svg-icon" src="{{ '/assets/envelope.svg' | relative_url }}"><span class="footer-contact-text">{{ site.email }}</span></a>
+              <img class="svg-icon" aria-label=="envelope-icon" src="{{ '/assets/envelope.svg' | relative_url }}"><span class="footer-contact-text">{{ site.email }}</span></a>
           </li>
           <li>
             <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}">
-              <svg class="svg-icon">
+              <svg class="svg-icon" aria-label=="github-icon">
                 <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use>
               </svg><span class="footer-contact-text">{{ site.github_username| escape }}</span>
             </a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}">
-              <svg class="svg-icon">
+              <svg class="svg-icon" aria-label=="linkedin-icon">
                 <use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use>
               </svg><span class="footer-contact-text">{{ site.linkedin_username| escape }}</span>
             </a>

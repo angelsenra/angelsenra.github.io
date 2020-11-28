@@ -17,20 +17,18 @@ title: Curriculum Vitae
         var pdf = new jsPDF('p', 'px', [width, a4Ratio * width]);
         pdf.html(element, {
             callback: function (pdf) {
-                var iframe = document.createElement('iframe');
-                iframe.setAttribute('style', 'position:absolute;right:0; top:0; bottom:0; height:100%; width:400px');
-                document.body.appendChild(iframe);
-                iframe.src = pdf.output('datauristring');
+                pdf.output('save', 'cv-angelsenra.pdf');
             },
-            filename: "cv-angelsenra.pdf",
             x: 20,
             y: 20
         });
     };
 </script>
+
+[Go back to jobs]({% link _pages/jobs.md %})
+
 <button onclick="javascript:generate('cv-content');">Generate PDF</button>
 
 <div id="cv-content" markdown="1">
     {%- include cv-content.md -%}
 </div>
-

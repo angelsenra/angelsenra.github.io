@@ -18,8 +18,12 @@ And please check again in a couple of weeks. Much more info should be here. Chee
 TODOs for the week starting 23 Nov:
 
 - [x] Add blog tags
-- [ ] Add cv section with experience and awards/competitions and text about me work-wise. Work picture
-    - [ ] PDF download
+- [x] Add cv section with experience and awards/competitions and text about me work-wise. Work picture
+    - [x] PDF download
+        - [ ] UTF8 support
+        - [ ] Don't break headings
+        - [ ] Update dependencies, load them later
+    - [ ] Improve button, link back to jobs page
 - [ ] Make the about me less of a cv. Friendly picture
 - [ ] Improve the home page, decide how to link to the other pages properly
 - [x] Google Analytics in proper account
