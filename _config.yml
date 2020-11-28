@@ -41,6 +41,7 @@ theme: minima
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jemoji
 
 # Minima: custom header links
 header_pages:
