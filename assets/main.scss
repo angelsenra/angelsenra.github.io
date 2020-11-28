@@ -3,3 +3,16 @@
 ---
 
 @import "minima";
+
+.display-only-on-print {
+    display: none;
+}
+
+@media print {
+  .hide-on-print {
+    display: none;
+  }
+  .display-only-on-print {
+    display: block;
+  }
+}
