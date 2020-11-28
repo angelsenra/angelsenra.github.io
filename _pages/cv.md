@@ -1,87 +1,36 @@
 ---
-layout: clean
+layout: page
 permalink: /cv
 title: Curriculum Vitae
 ---
 
-# Angel Senra
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.2/purify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.0.0/polyfills.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
+<script>
+    const a4Ratio = 842 / 595
+    const { jsPDF } = window.jspdf;
+    generate = function (elementId) {
+        const element = document.getElementById(elementId)
+        const width = element.offsetWidth + 40
+        var pdf = new jsPDF('p', 'px', [width, a4Ratio * width]);
+        pdf.html(element, {
+            callback: function (pdf) {
+                var iframe = document.createElement('iframe');
+                iframe.setAttribute('style', 'position:absolute;right:0; top:0; bottom:0; height:100%; width:400px');
+                document.body.appendChild(iframe);
+                iframe.src = pdf.output('datauristring');
+            },
+            filename: "cv-angelsenra.pdf",
+            x: 20,
+            y: 20
+        });
+    };
+</script>
+<button onclick="javascript:generate('cv-content');">Generate PDF</button>
 
-Linz, Upper Austria, Austria
+<div id="cv-content" markdown="1">
+    {%- include cv-content.md -%}
+</div>
 
-[jobs@angelsenra.com](mailto:jobs@angelsenra.com)<br>
-[linkedin.com/in/angelsenra](https://www.linkedin.com/in/angelsenra)
-
-## Summary
-
-Python enthusiast. Often facing new challenges and learning from them. One can always go one step further
-
-I believe in building confidence with stakeholders by consistently delivering great results on time. I listen, learn, improve, and evaluate; this has enabled me to continue growing every year
-
-Key concepts that I'm familiar with and use every day: git, ci/cd, scrum, agile, sql, nosql, restful architecture, oop, linux, bash, docker, aws
-
-## Experience
-
-{: style="padding-left:  30px" }
-### Backend Developer
-
-{: style="padding-left:  30px" }
-Usersnap
-<br>
-Oct 2019 - Present
-<br>
-Working as a Backend Developer and DevOps for Usersnap's SaaS. Working with Python (flask, celery, SQLalchemy), PostgreSQL, RabbitMQ, Kibana, AWS (EC2, ECS, S3). 
-Striving to improve the maintainability and scalability of this awesome product
-
-{: style="padding-left:  30px" }
-### Backend Developer
-
-{: style="padding-left:  30px" }
-Cires21
-<br>
-Dec 2018 - Oct 2019 (11 months)
-<br>
-Led the development of the new SaaS platform. Here users could send video to an ingest point and
-our encoders would process it in different qualities and upload them to one or more CDNs. Regarding Devops, we worked with modern technologies like Gitlab CI/CD, Docker, Kubernetes, or GCP. The web application was built on top of python (flask, celery), Redis, and PostgreSQL
-
-{: style="padding-left:  30px" }
-### Software Intern
-
-{: style="padding-left:  30px" }
-Cires21
-<br>
-Jul 2018 - Dec 2018 (6 months)
-<br>
-Worked with the QA department to test the live streaming software with unit tests in Python (intensively using selenium and FFmpeg). Also worked on bugs in the main product and on internal tooling
-
-{: style="padding-left:  30px" }
-### Data Analyst
-
-{: style="padding-left:  30px" }
-KSNetwork.es
-<br>
-Feb 2018 - May 2018 (4 months)
-<br>
-Data analytics for the game Counter-Strike: Global Offensive. Tech stack made up of Golang, Python, and MySQL running on several AWS services: ECS, ELB, Lambda, SNS, and SQS.
-<br>
-The software was sold to a Spanish company in May 2018
-
-## Education
-
-{: style="padding-left:  30px" }
-### Technical University of Madrid (UPM)
-
-{: style="padding-left:  30px" }
-Bachelor's degree, Computer Software Engineering 2018 - 2022
-
-## Skills
-
-Python (Programming Language) • Amazon Web Services (AWS) • SQL • Git • Bash • Docker Products
-
-## Honors & Awards
-
-- HP Codewars Madrid 2018 - Winner - HP
-<br>
-Feb 2018
-- Programming Contest for quantitative trading - Winner - Casuality Group y Liga de Bolsa
-<br>
-Mar 2019
