@@ -1,12 +1,12 @@
 ---
-layout: page
+layout: default
 permalink: /blog
 title: Blog
+last_modified_at: 2020-11-29
 ---
 
-{%- if site.posts.size > 0 -%}
+# Blog
 
-<h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
 <ul class="post-list">
 {%- for post in site.posts -%}
 <li>
@@ -44,5 +44,3 @@ title: Blog
 {%- if tag != last_tag -%}&nbsp;{%- endif -%}
 {%- endfor -%}
 </div>
-
-{%- endif -%}

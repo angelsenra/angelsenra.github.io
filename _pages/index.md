@@ -1,29 +1,19 @@
 ---
-layout: page
+layout: default
 permalink: /
 title: Home
-hide_title: true
+last_modified_at: 2020-11-29
 ---
+
+# Home
 
 Hello! Thank you for being interested in my website.
 
-At the moment (end of november), I'm in the process of moving the content of the old version to jekyll.
-The css might also not be awesome yet, but it's going to get better!
-Meanwhile, why don't you check out the [about me](/about-me) or the [blog](/blog)
+There are multiple paths that you could take from here.
+If you came from linkedin or are interested in **work-related opportunities**,
+check out [the jobs page]({% link _pages/jobs.md %}) where you can also find [my resume]({% link _pages/cv.md %})
 
-And please check again in a couple of weeks. Much more info should be here. Cheers!
+Or perhaps you just want to know **who I am**; if that\'s the case, head out to [the about-me section]({% link _pages/about-me.md %})
 
-
-TODOs for the week starting 23 Nov:
-
-- [x] Add blog tags
-- [ ] Add cv section with experience and awards/competitions and text about me work-wise. Work picture
-    - [ ] PDF download
-- [ ] Make the about me less of a cv. Friendly picture
-- [ ] Improve the home page, decide how to link to the other pages properly
-- [x] Google Analytics in proper account
-- [ ] SEO and page speed
-    - [ ] Enable sitemap Jekyll plugin
-- [x] Blog comments (disquss)
-- [x] Contact form
-- [x] Feedback (perhaps it's the same as the contact form)
+And if you want to **read my articles**, check [the blog]({% link _pages/blog.md %}).
+You could start by reading [how this website came to be]({% link _posts/2020-11-29-migrated-to-jekyll.md %})
