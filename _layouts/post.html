@@ -4,7 +4,13 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <h1 class="post-title p-name" itemprop="name headline">
+      <a href="{% link _pages/index.md %}">Home</a>
+      >
+      <a href="{% link _pages/blog.md %}">Blog</a>
+      >
+      {{ page.title | escape }}
+    </h1>
     <div>[
       {%- assign last_tag_name = page.tags | last -%}
       {%- for tag_name in page.tags -%}

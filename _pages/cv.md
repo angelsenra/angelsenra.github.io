@@ -5,11 +5,15 @@ title: Curriculum Vitae
 last_modified_at: 2020-11-29
 ---
 
-<h1 class="hide-on-print">Curriculum Vitae</h1>
+<h1 class="hide-on-print">
+<a href="{% link _pages/index.md %}">Home</a>
+>
+<a href="{% link _pages/jobs.md %}">Jobs</a>
+>
+Curriculum Vitae
+</h1>
 
 <p class="hide-on-print">
-    <a href="{% link _pages/jobs.md %}"><- Go back to jobs</a>
-    /
     <a href="javascript:print()">Print this page</a>
     /
     <span class="has-tooltip">

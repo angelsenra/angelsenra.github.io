@@ -21,6 +21,7 @@
   &:visited {
     color: $grey-color-dark;
   }
+
 }
 
 .site-nav {
@@ -28,7 +29,7 @@
   line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
-      display: none;
+    display: none;
   }
 
   .menu-icon {
@@ -42,6 +43,10 @@
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 20px;
+    }
+
+    &.active:not(:hover) {
+      text-decoration: underline dotted mix($background-color, $text-color, 20%);
     }
   }
 
@@ -99,8 +104,6 @@
   }
 }
 
-
-
 /**
  * Site footer
  */
@@ -120,11 +123,11 @@
 }
 
 .footer-contact-text {
-  margin-left: $spacing-unit / 4
+  margin-left: $spacing-unit / 4;
 }
 
 .footer-contact-link-without-icon {
-  margin-left: #{$spacing-unit / 4 + 16px}
+  margin-left: #{$spacing-unit / 4 + 16px};
 }
 
 .footer-col-wrapper {
@@ -142,30 +145,30 @@
 
 .footer-col-1 {
   width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width:         calc(35% - (#{$spacing-unit} / 2));
+  width: calc(35% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
   width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width:         calc(20% - (#{$spacing-unit} / 2));
+  width: calc(20% - (#{$spacing-unit} / 2));
   padding-top: 2.5em;
 }
 
 .footer-col-3 {
   width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-  width:         calc(45% - (#{$spacing-unit} / 2));
+  width: calc(45% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
   .footer-col-1,
   .footer-col-2 {
     width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width:         calc(50% - (#{$spacing-unit} / 2));
+    width: calc(50% - (#{$spacing-unit} / 2));
   }
 
   .footer-col-3 {
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
 
@@ -173,13 +176,12 @@
   .footer-col {
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
   }
   .footer-col-2 {
     padding-top: 0;
   }
 }
-
 
 /**
  * Page content
@@ -216,8 +218,6 @@
   display: block;
   @include relative-font-size(1.5);
 }
-
-
 
 /**
  * Posts
