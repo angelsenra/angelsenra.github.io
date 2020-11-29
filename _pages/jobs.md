@@ -5,7 +5,11 @@ title: Jobs
 last_modified_at: 2020-11-29
 ---
 
-# Jobs
+<h1>
+<a href="{% link _pages/index.md %}">Home</a>
+>
+Jobs
+</h1>
 
 ## [Click here to see my CV / Resume]({% link _pages/cv.md %})
 

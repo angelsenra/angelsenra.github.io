@@ -5,7 +5,11 @@ title: Blog
 last_modified_at: 2020-11-29
 ---
 
-# Blog
+<h1>
+<a href="{% link _pages/index.md %}">Home</a>
+>
+Blog
+</h1>
 
 <ul class="post-list">
 {%- for post in site.posts -%}
