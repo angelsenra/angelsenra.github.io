@@ -5,34 +5,34 @@ Linz, Upper Austria, Austria
 [jobs@angelsenra.com](mailto:jobs@angelsenra.com)<br>
 [linkedin.com/in/angelsenra](https://www.linkedin.com/in/angelsenra)
 
+<div class="wrapper dont-break-on-print" markdown="1">
 ## Summary
 
-{: style="padding-left: 30px" }
 Python enthusiast. Often facing new challenges and learning from them. One can always go one step further
 
-{: style="padding-left: 30px" }
 I believe in building confidence with stakeholders by consistently delivering great results on time. I listen, learn, improve, and evaluate; this has enabled me to continue growing every year
 
-{: style="padding-left: 30px" }
-Key concepts that I\'m familiar with and use every day: git, ci/cd, scrum, agile, sql, nosql, restful architecture, oop, linux, bash, docker, aws
+Key concepts that I\'m familiar with and use every day: GIT, CI/CD, scrum, agile, SQL, noSQL, restful architecture, OOP, linux, bash, docker, AWS
+
+</div>
 
 ## Experience
 
-{: style="padding-left: 30px" }
+<div class="wrapper dont-break-on-print" markdown="1">
 ### Backend Developer
 
-{: style="padding-left: 30px" }
 Usersnap
 <br>
 Oct 2019 - Present
 <br>
-Working as a Backend Developer and DevOps for Usersnap\'s SaaS. Working with Python (flask, celery, SQLalchemy), PostgreSQL, RabbitMQ, Kibana, AWS (EC2, ECS, S3). 
+Working as a Backend Developer and DevOps for Usersnap\'s SaaS. Working with Python (flask, celery, SQLalchemy), PostgreSQL, RabbitMQ, Kibana, AWS (EC2, ECS, S3).
 Striving to improve the maintainability and scalability of this awesome product
 
-{: style="padding-left: 30px" }
+</div>
+
+<div class="wrapper dont-break-on-print" markdown="1">
 ### Backend Developer
 
-{: style="padding-left: 30px" }
 Cires21
 <br>
 Dec 2018 - Oct 2019 (11 months)
@@ -40,20 +40,22 @@ Dec 2018 - Oct 2019 (11 months)
 Led the development of the new SaaS platform. Here users could send video to an ingest point and
 our encoders would process it in different qualities and upload them to one or more CDNs. Regarding Devops, we worked with modern technologies like Gitlab CI/CD, Docker, Kubernetes, or GCP. The web application was built on top of python (flask, celery), Redis, and PostgreSQL
 
-{: style="padding-left: 30px" }
+</div>
+
+<div class="wrapper dont-break-on-print" markdown="1">
 ### Software Intern
 
-{: style="padding-left: 30px" }
 Cires21
 <br>
 Jul 2018 - Dec 2018 (6 months)
 <br>
 Worked with the QA department to test the live streaming software with unit tests in Python (intensively using selenium and FFmpeg). Also worked on bugs in the main product and on internal tooling
 
-{: style="padding-left: 30px" }
+</div>
+
+<div class="wrapper dont-break-on-print" markdown="1">
 ### Data Analyst
 
-{: style="padding-left: 30px" }
 KSNetwork.es
 <br>
 Feb 2018 - May 2018 (4 months)
@@ -62,27 +64,26 @@ Data analytics for the game Counter-Strike: Global Offensive. Tech stack made up
 <br>
 The software was sold to a Spanish company in May 2018
 
+</div>
+
+<div class="wrapper dont-break-on-print" markdown="1">
 ## Education
 
-{: style="padding-left: 30px" }
 ### Technical University of Madrid (UPM)
 
-{: style="padding-left: 30px" }
 Bachelor\'s degree, Computer Software Engineering 2018 - 2022
 
-## Skills
+</div>
 
-{: style="padding-left: 30px" }
-Python (Programming Language) - Amazon Web Services (AWS) - SQL - Git - Bash - Docker Products
-
+<div class="wrapper dont-break-on-print" markdown="1">
 ## Honors & Awards
 
-{: style="padding-left: 30px" }
 HP Codewars Madrid 2018 - Winner - HP
 <br>
 Feb 2018
 
-{: style="padding-left: 30px" }
 Programming Contest for quantitative trading - Winner - Casuality Group y Liga de Bolsa
 <br>
 Mar 2019
+
+</div>

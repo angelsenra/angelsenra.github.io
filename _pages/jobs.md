@@ -4,7 +4,16 @@ permalink: /jobs
 title: Jobs
 ---
 
-[Check out my CV]({% link _pages/cv.md %})
+# Jobs
 
-Hi! I bet you expected to see some of my past experience and current work and projects. That is coming soon.
-I just moved to Jekyll in late november and there's still a lot of content to be migrated.
+## [Click here to see my CV / Resume]({% link _pages/cv.md %})
+
+<a href="{% link _pages/cv.md %}">
+    <img class="jobs-selfie" src="/assets/usersnap-selfie-medium.jpg" alt="Selfie with Usersnap logo behind">
+</a>
+
+Currently, I\'m working in Usersnap as a Backend Developer and Devops.
+
+My day to day consists of implementing new features (python/flask/celery/sqlalchemy) and maintaining the development/staging/production infraestructure (docker/AWS)
+
+I work with an amazing team that is continuosly moving forward and growing; if you like the idea of working in a place like that, [consider joining our team](https://usersnap.com/jobs)

@@ -4,8 +4,51 @@
 
 @import "minima";
 
+//
+// Specific pages
+//
+
+.jobs-selfie {
+  float: left;
+  margin: 0 $spacing-unit $spacing-unit 0;
+  width: 50%;
+  border-radius: 10%;
+}
+
+//
+// Tooltip
+//
+
+.has-tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted mix($text-color, $background-color, 20%);
+}
+
+.has-tooltip .tooltip-text {
+  visibility: hidden;
+  background-color: $text-color;
+  color: $background-color;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  z-index: 1;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.has-tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
+//
+// Printing
+//
+
 .display-only-on-print {
-    display: none;
+  display: none;
 }
 
 @media print {
@@ -15,4 +58,8 @@
   .display-only-on-print {
     display: block;
   }
+}
+
+.dont-break-on-print {
+  page-break-inside: avoid;
 }

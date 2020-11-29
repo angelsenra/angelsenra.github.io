@@ -4,40 +4,24 @@ permalink: /cv
 title: Curriculum Vitae
 ---
 
-{: .hide-on-print }
-[<- Go back to jobs]({% link _pages/jobs.md %})
-/
-[Print this page](javascript:print())
-/
-[Generate PDF](javascript:generatePDF('cv-content');)
+<h1 class="hide-on-print">Curriculum Vitae</h1>
+
+<p class="hide-on-print">
+    <a href="{% link _pages/jobs.md %}"><- Go back to jobs</a>
+    /
+    <a href="javascript:print()">Print this page</a>
+    /
+    <span class="has-tooltip">
+        <a href="javascript:generatePDF('cv-content', 'cv-angelsenra.pdf')">Generate PDF<noscript> (requires javascript)</noscript></a>
+        <span class="tooltip-text">⚠️<br>Prefer printing when possible</span>
+    </span>
+    <hr>
+</p>
 
 <div id="cv-content" markdown="1">
     {%- include cv-content.md -%}
 </div>
 
-<script src="/assets/dist/jspdf-2.1.1.umd.min.js"></script>
-<script src="/assets/dist/html2canvas-1.0.0-rc.7.min.js"></script>
-<script>
-    const a4Ratio = 842 / 595
-    const { jsPDF } = window.jspdf;
-    generatePDF = function (elementId) {
-        const element = document.getElementById(elementId)
-        const width = element.offsetWidth + 40
-        var pdf = new jsPDF(
-            {
-                orientation: 'p',
-                unit: 'px',
-                format: [width, a4Ratio * width],
-                putOnlyUsedFonts: true,
-                floatPrecision: 16 // or "smart", default is 16
-            }
-        );
-        pdf.html(element, {
-            callback: function (pdf) {
-                pdf.output('save', 'cv-angelsenra.pdf');
-            },
-            x: 20,
-            y: 20
-        });
-    };
-</script>
+<script defer src="/assets/dist/jspdf-2.1.1.umd.min.js"></script>
+<script defer src="/assets/dist/html2canvas-1.0.0-rc.7.min.js"></script>
+<script defer src="/assets/html2pdf.js"></script>
