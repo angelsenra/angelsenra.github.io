@@ -14,7 +14,7 @@ Jobs
 ## [Click here to see my CV / Resume]({% link _pages/cv.md %})
 
 <a href="{% link _pages/cv.md %}">
-    <img class="jobs-selfie" src="/assets/usersnap-selfie-medium.jpg" alt="Selfie with Usersnap logo behind">
+    <img class="img-float-left" src="{% link assets/img/usersnap-selfie.jpg %}" alt="Selfie with Usersnap logo behind">
 </a>
 
 Currently, I\'m working in Usersnap as a Backend Developer and Devops.
