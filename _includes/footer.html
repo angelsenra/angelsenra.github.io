@@ -8,20 +8,16 @@
         <ul class="clean-list">
           <li>
             <a href="mailto:{{ site.email }}">
-              <img class="svg-icon" aria-label=="envelope-icon" src="{{ '/assets/envelope.svg' | relative_url }}"><span class="footer-contact-text">{{ site.email }}</span></a>
+              {%- include icon-email.svg -%}<span class="footer-contact-text">{{ site.email }}</span></a>
           </li>
           <li>
             <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}">
-              <svg class="svg-icon" aria-label=="github-icon">
-                <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use>
-              </svg><span class="footer-contact-text">{{ site.github_username| escape }}</span>
+              {%- include icon-github.svg -%}<span class="footer-contact-text">{{ site.github_username| escape }}</span>
             </a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}">
-              <svg class="svg-icon" aria-label=="linkedin-icon">
-                <use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use>
-              </svg><span class="footer-contact-text">{{ site.linkedin_username| escape }}</span>
+              {%- include icon-linkedin.svg -%}<span class="footer-contact-text">{{ site.linkedin_username| escape }}</span>
             </a>
           </li>
           <li>
@@ -63,10 +59,8 @@
             <a href="https://github.com/angelsenra/angelsenra.github.io">
               <span>
                 Go to the repo
-                <svg class="svg-icon">
-                  <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use>
-                </svg>
               </span>
+              {%- include icon-github.svg -%}
             </a>
           </li>
         </ul>
@@ -78,5 +72,5 @@
 </footer>
 
 {%- if jekyll.environment == 'production' -%}
-  {%- include usersnap.html -%}
+{%-  include usersnap.html -%}
 {%- endif -%}
