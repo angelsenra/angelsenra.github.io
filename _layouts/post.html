@@ -4,6 +4,7 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
+    <!-- Headline -->
     <h1 class="post-title p-name" itemprop="name headline">
       <a href="{% link _pages/index.md %}">Home</a>
       >
@@ -11,21 +12,22 @@ layout: default
       >
       {{ page.title | escape }}
     </h1>
-    <div>[
+    <!-- Tags -->
+    <div>
       {%- assign last_tag_name = page.tags | last -%}
       {%- for tag_name in page.tags -%}
       <a href="/tags/{{ tag_name }}"><code class="highligher-rouge">{{ tag_name }}</code></a>
-      {%- if tag_name != last_tag_name -%}&nbsp;{%- endif -%}
+      {%-  if tag_name != last_tag_name -%}&nbsp;{%- endif -%}
       {%- endfor -%}
-      ]</div>
+    </div>
+    <!-- Post meta -->
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
-      {%- if page.author -%}
-      • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+      <span class="post-meta">• ~{{ page.content | number_of_words | divided_by: 200}} min</span>
+    </p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">

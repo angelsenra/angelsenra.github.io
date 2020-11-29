@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /cv
+permalink: /jobs/cv/
 title: Curriculum Vitae
 last_modified_at: 2020-11-29
 ---
