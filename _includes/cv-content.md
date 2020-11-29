@@ -5,8 +5,9 @@ Linz, Upper Austria, Austria
 [jobs@angelsenra.com](mailto:jobs@angelsenra.com)<br>
 [linkedin.com/in/angelsenra](https://www.linkedin.com/in/angelsenra)
 
-<div class="wrapper dont-break-on-print" markdown="1">
 ## Summary
+
+<div class="wrapper dont-break-on-print" markdown="1">
 
 Python enthusiast. Often facing new challenges and learning from them. One can always go one step further
 
@@ -66,8 +67,9 @@ The software was sold to a Spanish company in May 2018
 
 </div>
 
-<div class="wrapper dont-break-on-print" markdown="1">
 ## Education
+
+<div class="wrapper dont-break-on-print" markdown="1">
 
 ### Technical University of Madrid (UPM)
 
@@ -75,8 +77,9 @@ Bachelor\'s degree, Computer Software Engineering 2018 - 2022
 
 </div>
 
-<div class="wrapper dont-break-on-print" markdown="1">
 ## Honors & Awards
+
+<div class="wrapper dont-break-on-print" markdown="1">
 
 HP Codewars Madrid 2018 - Winner - HP
 <br>

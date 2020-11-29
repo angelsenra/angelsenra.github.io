@@ -2,6 +2,7 @@
 layout: default
 permalink: /cv
 title: Curriculum Vitae
+last_modified_at: 2020-11-29
 ---
 
 <h1 class="hide-on-print">Curriculum Vitae</h1>
