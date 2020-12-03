@@ -1,7 +1,8 @@
 ---
 layout: default
 permalink: /about-me/
-title: About me
+short_name: About me
+title: "About me: my history and personal hobbies"
 last_modified_at: 2020-11-29
 ---
 

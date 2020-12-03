@@ -1,6 +1,7 @@
 ---
 layout: post
 permalink: /blog/moving-to-jekyll/
+short_name: Moving to Jekyll
 title: How I used Jekyll and Github Pages to create my website
 tags: meta jekyll
 last_modified_at: 2020-11-29

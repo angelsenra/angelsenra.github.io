@@ -1,7 +1,8 @@
 ---
 layout: default
 permalink: /blog/
-title: Blog
+short_name: Blog
+title: "Blog: posts that I wrote to be publicly shared"
 last_modified_at: 2020-11-29
 ---
 
@@ -25,7 +26,7 @@ last_modified_at: 2020-11-29
         <div>
             {%- assign last_tag_name = post.tags | last -%}
             {%- for tag_name in post.tags -%}
-            <a href="/tags/{{ tag_name }}"><code class="highligher-rouge">{{ tag_name }}</code></a>
+            <a href="/tags/{{ tag_name }}/"><code class="highligher-rouge">{{ tag_name }}</code></a>
             {%-  if tag_name != last_tag_name -%}&nbsp;{%- endif -%}
             {%- endfor -%}
         </div>
@@ -66,7 +67,8 @@ last_modified_at: 2020-11-29
     All tags:&nbsp;
     {%- assign last_tag = unique_sorted_tags | last -%}
     {%- for tag in unique_sorted_tags -%}
-    <a href="/tags/{{ tag }}"><code class="highligher-rouge">{{ tag }}</code></a>
+    <!-- Can't use link since it doesn't take parameters as of jekyll 3 -->
+    <a href="/tags/{{ tag }}/"><code class="highligher-rouge">{{ tag }}</code></a>
     {%-  if tag != last_tag -%}&nbsp;{%- endif -%}
     {%- endfor -%}
 </p>

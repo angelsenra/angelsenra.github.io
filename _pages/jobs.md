@@ -1,7 +1,8 @@
 ---
 layout: default
 permalink: /jobs/
-title: Jobs
+short_name: Jobs
+title: "Jobs: past experience and current projects"
 last_modified_at: 2020-11-29
 ---
 

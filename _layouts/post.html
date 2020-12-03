@@ -5,18 +5,20 @@ layout: default
 
   <header>
     <!-- Headline -->
-    <h1 class="post-title p-name" itemprop="name headline">
+    <h1 itemprop="name headline">
       <a href="{% link _pages/index.md %}">Home</a>
       >
       <a href="{% link _pages/blog.md %}">Blog</a>
       >
-      {{ page.title | escape }}
+      {{ page.short_name }}
     </h1>
+    <h2 class="post-title p-name">{{ page.title }}</h2>
     <!-- Tags -->
     <div>
       {%- assign last_tag_name = page.tags | last -%}
       {%- for tag_name in page.tags -%}
-      <a href="/tags/{{ tag_name }}"><code class="highligher-rouge">{{ tag_name }}</code></a>
+      <!-- Can't use link since it doesn't take parameters as of jekyll 3 -->
+      <a href="/tags/{{ tag_name }}/"><code class="highligher-rouge">{{ tag_name }}</code></a>
       {%-  if tag_name != last_tag_name -%}&nbsp;{%- endif -%}
       {%- endfor -%}
     </div>
@@ -28,8 +30,8 @@ layout: default
       </time>
       •
       <span class="has-tooltip">
-          <span>~{{ page.content | number_of_words | divided_by: 265.0 | ceil }} min</span>
-          <span class="tooltip-text-right tooltip-text-medium">{{ page.content | number_of_words }} words at 265 WPM</span>
+        <span>~{{ page.content | number_of_words | divided_by: 265.0 | ceil }} min</span>
+        <span class="tooltip-text-right tooltip-text-medium">{{ page.content | number_of_words }} words at 265 WPM</span>
       </span>
     </p>
   </header>

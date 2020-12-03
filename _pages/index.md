@@ -1,7 +1,8 @@
 ---
 layout: default
 permalink: /
-title: Home
+short_name: Home
+title: "Home page: what you can find on this site"
 last_modified_at: 2020-11-29
 ---
 

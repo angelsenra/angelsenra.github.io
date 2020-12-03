@@ -1,7 +1,8 @@
 ---
 layout: default
 permalink: /jobs/cv/
-title: Curriculum Vitae
+short_name: CV
+title: "Curriculum Vitae"
 last_modified_at: 2020-11-29
 ---
 
