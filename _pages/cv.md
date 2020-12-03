@@ -18,10 +18,10 @@ Curriculum Vitae
     /
     <span class="has-tooltip">
         <a href="javascript:generatePDF('cv-content', 'cv-angelsenra.pdf')">Generate PDF<noscript> (requires javascript)</noscript></a>
-        <span class="tooltip-text">⚠️<br>Prefer printing when possible</span>
+        <span class="tooltip-text-right tooltip-text-medium">⚠️<br>Prefer printing when possible</span>
     </span>
-    <hr>
 </p>
+<hr class="hide-on-print">
 
 <div id="cv-content" markdown="1">
     {%- include cv-content.md -%}

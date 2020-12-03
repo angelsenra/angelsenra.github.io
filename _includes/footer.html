@@ -26,7 +26,7 @@
                 if (!window.usersnapGlobalApi)
                   alert("Usersnap widget was not loaded correctly :/\nPlease try again or contact me via email")
                 else {
-                  window.usersnapGlobalApi.show("4633afd7-404e-45b3-b5e4-c31f5e93d03b")
+                  window.usersnapGlobalApi.show("4633afd7-404e-45b3-b5e4-c31f5e93d03b").then(widgetApi => widgetApi.open())
                 }
               }
             </script>

@@ -26,7 +26,11 @@ layout: default
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
-      <span class="post-meta">• ~{{ page.content | number_of_words | divided_by: 200}} min</span>
+      •
+      <span class="has-tooltip">
+          <span>~{{ page.content | number_of_words | divided_by: 265.0 | ceil }} min</span>
+          <span class="tooltip-text-right tooltip-text-medium">{{ page.content | number_of_words }} words at 265 WPM</span>
+      </span>
     </p>
   </header>
 

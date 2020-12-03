@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /blog
+permalink: /blog/
 title: Blog
 last_modified_at: 2020-11-29
 ---
@@ -35,7 +35,11 @@ last_modified_at: 2020-11-29
                 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
                 {{ post.date | date: date_format }}
             </time>
-            <span class="post-meta">• ~{{ post.content | number_of_words | divided_by: 200}} min</span>
+            •
+            <span class="has-tooltip">
+                <span>~{{ post.content | number_of_words | divided_by: 265.0 | ceil }} min</span>
+                <span class="tooltip-text-right tooltip-text-medium">{{ post.content | number_of_words }} words at 265 WPM</span>
+            </span>
         </p>
         <!-- Post description -->
         {%- if site.show_excerpts -%}

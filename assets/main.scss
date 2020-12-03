@@ -5,17 +5,17 @@
 @import "minima";
 
 .img-float-left {
+  border-radius: 10%;
   float: left;
   margin: 0 $spacing-unit $spacing-unit 0;
   width: 50%;
-  border-radius: 10%;
 }
 
 .img-float-right {
+  border-radius: 10%;
   float: right;
   margin: 0 0 $spacing-unit $spacing-unit;
   width: 50%;
-  border-radius: 10%;
 }
 
 //
@@ -27,25 +27,57 @@
 //
 
 .has-tooltip {
-  position: relative;
-  display: inline-block;
   border-bottom: 1px dotted mix($text-color, $background-color, 20%);
+  display: inline-block;
+  position: relative;
 
-  .tooltip-text {
-    visibility: hidden;
-    background-color: $text-color;
-    color: $background-color;
-    text-align: center;
-    padding: 5px 0;
+  .tooltip-text-medium {
+    width: #{$spacing-unit * 3};
+  }
+  
+  .tooltip-text-top,
+  .tooltip-text-right,
+  .tooltip-text-bottom,
+  .tooltip-text-left {
+    background-color: $grey-color-light;
     border-radius: 6px;
-    z-index: 1;
+    border: 1px dotted $grey-color-dark;
+    color: $text-color;
+    display: inline-block;
+    padding: #{$spacing-unit / 8} #{$spacing-unit / 4};
     position: absolute;
-    top: 100%;
+    text-align: center;
+    visibility: hidden;
+    z-index: 1;
+}
+
+  .tooltip-text-top {
+    bottom: 105%;
     left: 0%;
   }
 
-  &:hover .tooltip-text {
-    visibility: visible;
+  .tooltip-text-right {
+    top: 0%;
+    left: 105%;
+  }
+
+  .tooltip-text-bottom {
+    top: 105%;
+    left: 0%;
+  }
+
+  .tooltip-text-left {
+    top: 0%;
+    right: 105%;
+  }
+
+  &:hover {
+    .tooltip-text-top,
+    .tooltip-text-right,
+    .tooltip-text-bottom,
+    .tooltip-text-left {
+      visibility: visible;
+    }
   }
 }
 
