@@ -3,6 +3,9 @@ layout: default
 permalink: /
 short_name: Home
 title: "Home page: what you can find on this site"
+description: >-
+  Programmer currenctly living in Austria.
+  Here you will find more about me, my job, blog articles, and ways to contact me.
 last_modified_at: 2020-11-29
 ---
 

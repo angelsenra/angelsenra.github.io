@@ -3,6 +3,9 @@ layout: default
 permalink: /blog/
 short_name: Blog
 title: "Blog: posts that I wrote to be publicly shared"
+description: >-
+  Read about programming and technology related topics.
+  Little experiments, big projects, new technologies; if it interests me I will write about it.
 last_modified_at: 2020-11-29
 ---
 
