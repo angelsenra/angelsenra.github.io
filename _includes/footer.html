@@ -41,7 +41,7 @@
           {%-  assign my_page = site.pages | where: "path", path | first -%}
           {%-  if my_page.title -%}
           <li>
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a><br>
+            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.short_name | escape }}</a><br>
           </li>
           {%-  endif -%}
           {%- endfor -%}
@@ -53,7 +53,7 @@
         <ul class="clean-list">
           {%- assign page = site.pages | where: "path", "_pages/about-this-website.md" | first -%}
           {%- if page -%}
-          <li><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></li>
+          <li><a href="{{ page.url | relative_url }}">{{ page.short_name | escape }}</a></li>
           {%- endif -%}
           <li>
             <a href="https://github.com/angelsenra/angelsenra.github.io">

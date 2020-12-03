@@ -1,7 +1,11 @@
 ---
 layout: default
 permalink: /about-this-website/
-title: About this website
+short_name: About this website
+title: "About this website: how is it built?"
+description: >-
+  This page is built over Jekyll and hosted in GitHub pages.
+  Find out more about it here.
 last_modified_at: 2020-11-29
 ---
 

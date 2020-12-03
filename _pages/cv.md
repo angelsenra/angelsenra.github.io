@@ -1,7 +1,11 @@
 ---
 layout: default
 permalink: /jobs/cv/
-title: Curriculum Vitae
+short_name: CV
+title: "Curriculum Vitae"
+description: >-
+  Python enthusiast.
+  I believe in building confidence with stakeholders by consistently delivering great results on time.
 last_modified_at: 2020-11-29
 ---
 
