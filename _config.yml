@@ -6,6 +6,11 @@ description: >-
 url: https://www.angelsenra.com/
 logo: https://www.angelsenra.com/assets/img/usersnap-selfie.jpg
 locale: en_US
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: https://www.angelsenra.com/assets/img/usersnap-selfie.jpg
 
 email: me@angelsenra.com
 baseurl: "" # the subpath of your site, e.g. /blog

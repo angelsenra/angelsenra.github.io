@@ -6,6 +6,7 @@ title: "About me: my history and personal hobbies"
 description: >-
   Brief history of the events that led to me being a programmer nowadays.
   Some of my hobbies and what I like to do with my time.
+image: https://www.angelsenra.com/assets/img/kid-snorkel.jpg
 last_modified_at: 2020-11-29
 ---
 

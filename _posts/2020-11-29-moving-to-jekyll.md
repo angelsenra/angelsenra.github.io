@@ -3,6 +3,9 @@ layout: post
 permalink: /blog/moving-to-jekyll/
 short_name: Moving to Jekyll
 title: How I used Jekyll and Github Pages to create my website
+description: >-
+  Moving my website from React to a more primitive server-rendered website has been a great choice.
+  Find out why and how I did this.
 tags: meta jekyll
 last_modified_at: 2020-11-29
 ---

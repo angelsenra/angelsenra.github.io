@@ -6,6 +6,7 @@ title: "Jobs: past experience and current projects"
 description: >-
   Backend engineer working at Usersnap in Linz, Austria.
   Find here my CV and current projects.
+image: https://www.angelsenra.com/assets/img/hp-codewars-bcn.jpg
 last_modified_at: 2020-11-29
 ---
 
