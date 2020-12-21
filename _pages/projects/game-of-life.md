@@ -8,5 +8,7 @@ description: >-
 last_modified_at: 2020-12-20
 ---
 
+# [Home]({% link _pages/index.md %}) > Game of Life
+
 <canvas id="myCanvas" width="800" height="600" style="border: 1px solid black;"></canvas>
-<script src="{% link assets/game-of-life.js %}"></script> 
+<script src="{% link assets/game-of-life.js %}"></script>
