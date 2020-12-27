@@ -18,9 +18,30 @@
   width: 50%;
 }
 
-//
-// Specific pages
-//
+.h-centered-text {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#game-canvas {
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  border: 1px solid black;
+  margin: #{$spacing-unit / 2} 0;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$on-palm} - (#{$spacing-unit}));
+    max-width:         calc(#{$on-palm} - (#{$spacing-unit}));
+  }
+
+  @include media-query($on-palm) {
+    max-width: -webkit-calc(400px - (#{$spacing-unit}));
+    max-width:         calc(400px - (#{$spacing-unit}));
+  }
+}
 
 //
 // Tooltip
@@ -34,7 +55,7 @@
   .tooltip-text-medium {
     width: #{$spacing-unit * 3};
   }
-  
+
   .tooltip-text-top,
   .tooltip-text-right,
   .tooltip-text-bottom,
@@ -49,7 +70,7 @@
     text-align: center;
     visibility: hidden;
     z-index: 1;
-}
+  }
 
   .tooltip-text-top {
     bottom: 105%;

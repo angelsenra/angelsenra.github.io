@@ -10,5 +10,21 @@ last_modified_at: 2020-12-20
 
 # [Home]({% link _pages/index.md %}) > Game of Life
 
-<canvas id="myCanvas" width="800" height="600" style="border: 1px solid black;"></canvas>
+<div class="h-centered-text">
+  <canvas id="game-canvas" width="600" height="400"></canvas>
+</div>
+
+<h1 id="paused" class="h-centered-text hidden">-- PAUSED --</h1>
+
+Updating <span id="game-speed">??</span> times per second -
+<span id="step-count">??</span> steps since last reset
+
+```
+Pause       - space / p
+Next step   - right arrow / d / n
+Speed Up    - up arrow / w
+Slow Down  - down arrow / s
+Reset       - r
+```
+
 <script src="{% link assets/game-of-life.js %}"></script>
