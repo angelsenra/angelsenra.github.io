@@ -44,7 +44,7 @@ Finally, I appreciate that it comes with "batteries included". As soon as you cl
 
 ## Conclusion
 
-If you are intrigued by this idea I recommend that you immediately clone [the minima repository](https://github.com/jekyll/minima) and write a couple of `.md` files in the `_posts` folder. It's very easy to try and you will quickly see wether you want to go further or not.
+If you are intrigued by this idea I recommend that you immediately clone [the minima repository](https://github.com/jekyll/minima) and write a couple of `.md` files in the `_posts` folder. It's very easy to try and you will quickly see whether you want to go further or not.
 
 If you have any question or feedback leave a comment below or contact me privately (more info in the footer)
 
