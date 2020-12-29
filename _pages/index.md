@@ -21,3 +21,5 @@ Or perhaps you just want to know **who I am**; if that\'s the case, head out to 
 
 And if you want to **read my articles**, check [the blog]({% link _pages/blog.md %}).
 You could start by reading [how this website came to be]({% link _posts/2020-11-29-moving-to-jekyll.md %}).
+
+You can also look through [my projects]({% link _pages/projects.md %})

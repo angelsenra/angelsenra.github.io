@@ -4,11 +4,11 @@ permalink: /projects/game-of-life/
 short_name: Game of Life
 title: "Conway's Game of Life: the most famous cellular automaton"
 description: >-
-  Building a game of life using a canvas and javascript code. It's my first project using canvas and it's mostly an excuse to learn it
-last_modified_at: 2020-12-20
+  Building a Game of Life using a canvas and javascript code. It's my first project using canvas and it's mostly an excuse to learn it
+last_modified_at: 2020-12-29
 ---
 
-# [Home]({% link _pages/index.md %}) > Game of Life
+# [Home]({% link _pages/index.md %}) > [Projects]({% link _pages/projects.md %}) > Game of Life
 
 <div class="h-centered-text">
   <canvas id="game-canvas" width="600" height="400"></canvas>

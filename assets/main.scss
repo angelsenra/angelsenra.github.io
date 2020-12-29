@@ -9,6 +9,12 @@
   float: left;
   margin: 0 $spacing-unit $spacing-unit 0;
   width: 50%;
+
+  @include media-query($on-palm) {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .img-float-right {
@@ -16,6 +22,12 @@
   float: right;
   margin: 0 0 $spacing-unit $spacing-unit;
   width: 50%;
+
+  @include media-query($on-palm) {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .h-centered-text {
