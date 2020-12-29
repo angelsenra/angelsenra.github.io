@@ -21,3 +21,15 @@ last_modified_at: 2020-12-29
 [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) is something fun to play with and to read if you haven't already.
 
 With this project, you can try custom patterns, control the speed, and pause it. Giving you the opportunity to have fun with the Game of Life.
+
+<br>
+
+<a href="{% link _pages/projects/tic-tac-toe.md %}">
+  <img class="img-float-right" src="{% link assets/img/project-tic-tac-toe.png %}" alt="Picture of a TicTacToe board">
+</a>
+
+## [TicTacToe]({% link _pages/projects/tic-tac-toe.md %})
+
+### Play some games against a smart AI
+
+[TicTacToe](https://en.wikipedia.org/wiki/Tic-tac-toe) is fun to play. And in this case, its [minimax](https://en.wikipedia.org/wiki/Minimax) AI makes it more challenging

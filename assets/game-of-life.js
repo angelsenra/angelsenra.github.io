@@ -141,4 +141,4 @@ stepCountSpan.innerHTML = stepCount;
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-document.addEventListener("mousedown", mouseDownHandler, false);
+canvas.addEventListener("mousedown", mouseDownHandler, false);
