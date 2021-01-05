@@ -1,4 +1,5 @@
 const canvas = document.getElementById("game-canvas");
+const buttonReset = document.getElementById("btn-reset");
 const ctx = canvas.getContext("2d");
 const BLOCK_SIZE = Math.floor(Math.min(canvas.width, canvas.height) / 3);
 canvas.width -= canvas.width % BLOCK_SIZE;
@@ -141,8 +142,11 @@ const mouseDownHandler = (e) => {
 
 // Main
 
-resetGame();
+window.onload = () => {
+  resetGame();
 
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
-canvas.addEventListener("mousedown", mouseDownHandler, false);
+  document.addEventListener("keydown", keyDownHandler, false);
+  document.addEventListener("keyup", keyUpHandler, false);
+  canvas.addEventListener("mousedown", mouseDownHandler, false);
+  buttonReset.addEventListener("click", resetGame, false);
+};
