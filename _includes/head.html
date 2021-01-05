@@ -3,10 +3,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
-  <link rel="stylesheet" href="{% link assets/main.scss %}">
+  <link rel="stylesheet" href="{% link assets/css/main.scss %}">
+  {%- if page.uses_bootstrap -%}
+  <link rel="stylesheet" href="{% link assets/css/bootstrap.scss %}">
+  {%- endif -%}
   <link rel="icon" href="{% link favicon.ico %}">
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_site_tag -%}
-    {%- include google-analytics.html -%}
+  {%-  include google-analytics.html -%}
   {%- endif -%}
 </head>
