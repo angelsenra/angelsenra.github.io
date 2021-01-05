@@ -118,8 +118,8 @@ const keyUpHandler = (e) => {
 const mouseDownHandler = (e) => {
   rx = e.clientX - canvas.offsetLeft + window.scrollX;
   ry = e.clientY - canvas.offsetTop + window.scrollY;
-  x = Math.floor((rx * 3) / canvas.width);
-  y = Math.floor((ry * 3) / canvas.height);
+  x = Math.floor((rx * 3) / canvas.scrollWidth);
+  y = Math.floor((ry * 3) / canvas.scrollHeight);
   if (winner) {
     console.log("The game is over!");
     return;

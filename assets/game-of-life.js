@@ -8,7 +8,7 @@ canvas.width -= canvas.width % BLOCK_SIZE;
 canvas.height -= canvas.height % BLOCK_SIZE;
 const WIDTH = canvas.width / BLOCK_SIZE;
 const HEIGHT = canvas.height / BLOCK_SIZE;
-const nextGrid = new Array(WIDTH * HEIGHT);
+const nextGrid = Array(WIDTH * HEIGHT).fill(0);
 let isPaused = false;
 let hasGridChanged = true;
 let grid = [...nextGrid];
@@ -23,6 +23,13 @@ const randomGrid = () => {
       grid[y * WIDTH + x] = Math.random() > 0.5 ? 1 : 0;
     }
   }
+  hasGridChanged = true;
+  stepCount = 0;
+  stepCountSpan.innerHTML = stepCount;
+};
+
+const clearGrid = () => {
+  grid.fill(0);
   hasGridChanged = true;
   stepCount = 0;
   stepCountSpan.innerHTML = stepCount;
@@ -120,13 +127,16 @@ const keyUpHandler = (e) => {
   if (e.key == "r") {
     randomGrid();
   }
+  if (e.key == "c") {
+    clearGrid();
+  }
 };
 
 const mouseDownHandler = (e) => {
   rx = e.clientX - canvas.offsetLeft + window.scrollX;
   ry = e.clientY - canvas.offsetTop + window.scrollY;
-  x = Math.floor((rx * WIDTH) / canvas.width);
-  y = Math.floor((ry * HEIGHT) / canvas.height);
+  x = Math.floor((rx * WIDTH) / canvas.scrollWidth);
+  y = Math.floor((ry * HEIGHT) / canvas.scrollHeight);
   grid[y * WIDTH + x] ^= 1;
   drawCell(x, y);
 };
