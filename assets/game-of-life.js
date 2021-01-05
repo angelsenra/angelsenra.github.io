@@ -1,7 +1,12 @@
 const canvas = document.getElementById("game-canvas");
+const buttonPause = document.getElementById("btn-pause");
+const buttonNext = document.getElementById("btn-next");
+const buttonSpeedUp = document.getElementById("btn-speed-up");
+const buttonSlowDown = document.getElementById("btn-slow-down");
+const buttonReset = document.getElementById("btn-reset");
+const buttonClear = document.getElementById("btn-clear");
 const gameSpeedSpan = document.getElementById("game-speed");
 const stepCountSpan = document.getElementById("step-count");
-const pausedTitle = document.getElementById("paused");
 const ctx = canvas.getContext("2d");
 const BLOCK_SIZE = 10;
 canvas.width -= canvas.width % BLOCK_SIZE;
@@ -108,21 +113,18 @@ const keyDownHandler = (e) => {
     lifeStep();
   }
   if (e.key == "ArrowUp" || e.key == "w") {
-    gameSpeed = Math.min(gameSpeed + 1, 60);
-    gameSpeedSpan.innerHTML = gameSpeed;
+    speedUp();
     e.preventDefault(); // Don't scroll up on arrow press
   }
   if (e.key == "ArrowDown" || e.key == "s") {
-    gameSpeed = Math.max(gameSpeed - 1, 1);
-    gameSpeedSpan.innerHTML = gameSpeed;
-    e.preventDefault();
+    slowDown();
+    e.preventDefault(); // Don't scroll dowb on arrow press
   }
 };
 
 const keyUpHandler = (e) => {
   if (e.key == " " || e.key == "p") {
-    isPaused ^= 1;
-    pausedTitle.style.display = isPaused ? "block" : "none";
+    togglePause();
   }
   if (e.key == "r") {
     randomGrid();
@@ -141,14 +143,37 @@ const mouseDownHandler = (e) => {
   drawCell(x, y);
 };
 
+const togglePause = () => {
+  isPaused ^= 1;
+  buttonPause.innerHTML = isPaused ? "Continue" : "Pause";
+};
+
+const speedUp = () => {
+  gameSpeed = Math.min(gameSpeed + 1, 60);
+  gameSpeedSpan.innerHTML = gameSpeed;
+};
+
+const slowDown = () => {
+  gameSpeed = Math.max(gameSpeed - 1, 1);
+  gameSpeedSpan.innerHTML = gameSpeed;
+};
+
 // Main
 
-randomGrid();
-gameLoop();
-drawLoop();
-gameSpeedSpan.innerHTML = gameSpeed;
-stepCountSpan.innerHTML = stepCount;
+window.onload = () => {
+  randomGrid();
+  gameLoop();
+  drawLoop();
+  gameSpeedSpan.innerHTML = gameSpeed;
+  stepCountSpan.innerHTML = stepCount;
 
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
-canvas.addEventListener("mousedown", mouseDownHandler, false);
+  document.addEventListener("keydown", keyDownHandler, false);
+  document.addEventListener("keyup", keyUpHandler, false);
+  canvas.addEventListener("mousedown", mouseDownHandler, false);
+  buttonPause.addEventListener("click", togglePause, false);
+  buttonNext.addEventListener("click", lifeStep, false);
+  buttonSpeedUp.addEventListener("click", speedUp, false);
+  buttonSlowDown.addEventListener("click", slowDown, false);
+  buttonReset.addEventListener("click", randomGrid, false);
+  buttonClear.addEventListener("click", clearGrid, false);
+};
