@@ -1,4 +1,5 @@
 const canvas = document.getElementById("game-canvas");
+const buttonReset = document.getElementById("btn-reset");
 const ctx = canvas.getContext("2d");
 const BLOCK_SIZE = Math.floor(Math.min(canvas.width, canvas.height) / 3);
 canvas.width -= canvas.width % BLOCK_SIZE;
@@ -118,8 +119,8 @@ const keyUpHandler = (e) => {
 const mouseDownHandler = (e) => {
   rx = e.clientX - canvas.offsetLeft + window.scrollX;
   ry = e.clientY - canvas.offsetTop + window.scrollY;
-  x = Math.floor((rx * 3) / canvas.width);
-  y = Math.floor((ry * 3) / canvas.height);
+  x = Math.floor((rx * 3) / canvas.scrollWidth);
+  y = Math.floor((ry * 3) / canvas.scrollHeight);
   if (winner) {
     console.log("The game is over!");
     return;
@@ -141,8 +142,11 @@ const mouseDownHandler = (e) => {
 
 // Main
 
-resetGame();
+window.onload = () => {
+  resetGame();
 
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
-canvas.addEventListener("mousedown", mouseDownHandler, false);
+  document.addEventListener("keydown", keyDownHandler, false);
+  document.addEventListener("keyup", keyUpHandler, false);
+  canvas.addEventListener("mousedown", mouseDownHandler, false);
+  buttonReset.addEventListener("click", resetGame, false);
+};
